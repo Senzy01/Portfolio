@@ -87,6 +87,19 @@ p {
   color: #444;
 }
 
+a.senzy-link{
+  color: #007bff;
+  text-decoration: none;
+}
+
+a.senzy-link:hover{
+  text-decoration: underline;
+}
+
+a.senzy-link:visited{
+  color: #007bff;
+}
+
 #projects a:link,
 #projects a:visited,
 #projects a:hover,
