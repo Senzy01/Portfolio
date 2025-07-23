@@ -1,0 +1,495 @@
+/* styles/section.css */
+
+/* ------------------------------------------- */
+/* 1. Hero Section Styles                      */
+/* ------------------------------------------- */
+
+.hero-section {
+    min-height: 60vh; /* ADJUSTED: Base height for desktop/larger screens */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #1A202C; /* A deep, subtle dark charcoal/navy */
+    padding: 4rem 0; /* ADJUSTED: Base padding for desktop/larger screens */
+    position: relative; /* For absolute positioning of canvas */
+    overflow: hidden; /* Hide any overflow from particles */
+}
+
+/* Canvas for starfield/particles */
+.hero-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Behind the content */
+    display: block;
+}
+
+.hero-content {
+    max-width: 950px; /* Wider content for large screens */
+    position: relative; /* Ensure content is above canvas */
+    z-index: 1; /* Above the canvas */
+}
+
+.hero-greeting {
+    font-family: 'Dancing Script', cursive; /* UPDATED: Specific stylish font */
+    font-size: 2.5rem; /* Stylish size for "Hello" */
+    color: var(--clr-accent); /* Accent color for "Hello" */
+    margin-bottom: 1rem;
+    font-weight: var(--fw-semibold); /* Keep font weight for Dancing Script */
+    letter-spacing: -0.01em;
+    /* min-height removed, JS will manage content height */
+}
+
+.hero-title {
+    font-size: var(--fs-h1);
+    margin-bottom: 1.5rem;
+    color: #FFFFFF; /* White for main title */
+    font-weight: var(--fw-bold);
+    letter-spacing: -0.04em; /* Tighter letter spacing for large titles */
+}
+
+.hero-tagline {
+    font-size: var(--fs-tagline);
+    color: #E0E0E0; /* Light gray fallback */
+    margin-bottom: 3.5rem;
+    font-weight: var(--fw-light); /* Lighter weight for tagline */
+    line-height: 1.5;
+
+    background: linear-gradient(90deg, #E0E0E0, #BBBBBB);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    transition: background-position 1s ease-out;
+}
+
+.hero-tagline.reveal-gradient {
+    background-position: 0% 0;
+}
+
+.hero-cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.hero-section .button-primary {
+    background-color: var(--clr-accent);
+    color: var(--clr-background-primary);
+    border-color: var(--clr-accent);
+}
+
+.hero-section .button-primary:hover {
+    background-color: var(--clr-accent-hover);
+    border-color: var(--clr-accent-hover);
+}
+
+.hero-section .button-secondary {
+    background-color: transparent;
+    color: var(--clr-background-primary);
+    border-color: var(--clr-background-primary);
+}
+
+.hero-section .button-secondary:hover {
+    background-color: var(--clr-background-primary);
+    color: var(--clr-text-primary);
+    border-color: var(--clr-background-primary);
+}
+
+
+/* ------------------------------------------- */
+/* 2. About Section Styles                     */
+/* ------------------------------------------- */
+.about-section {
+    padding: 4rem 0; /* Reverted to more padding for desktop base */
+    background-color: white;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6rem;
+}
+
+.about-text {
+    flex: 2;
+    text-align: center; /* Default to left align on desktop */
+}
+
+.about-text p {
+    margin-bottom: 1.8rem;
+    font-size: var(--fs-body);
+    color: var(--clr-text-secondary);
+}
+
+/* Note: about-image was removed from HTML based on previous instruction */
+/* If you re-added it, you'll need to uncomment/add its styles here */
+/*
+.about-image {
+    flex: 1;
+    max-width: 400px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px var(--clr-shadow-medium);
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+}
+*/
+
+.about-tools-logos {
+    text-align: center;
+    margin-top: 8rem;
+    padding-top: 4rem;
+    border-top: 1px solid var(--clr-border);
+}
+
+.about-tools-logos h3 {
+    font-size: 1.6rem;
+    color: var(--clr-text-primary);
+    margin-bottom: 3rem;
+}
+
+.tool-logos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.tool-logos-grid img {
+    height: 60px;
+    width: auto;
+    opacity: 0.7;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.tool-logos-grid img:hover {
+    opacity: 1;
+    transform: translateY(-5px);
+}
+
+/* ------------------------------------------- */
+/* 3. Skills Section Styles                    */
+/* ------------------------------------------- */
+.skills-section {
+    padding: 10rem 0;
+    text-align: center;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 5rem;
+    margin-top: 5rem;
+}
+
+
+/* ------------------------------------------- */
+/* 4. Experience & Education Section Styles (Timeline) */
+/* ------------------------------------------- */
+.experience-section, .education-section {
+    padding: 10rem 0;
+}
+.experience-section h2{
+    color: white;
+}
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: var(--clr-border);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+.timeline-line {
+    position: absolute;
+    width: 4px;
+    background-color: var(--clr-accent);
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 0;
+    z-index: 1;
+    transition: height 0.3s ease;
+    background: linear-gradient(to bottom, var(--clr-accent), rgba(0, 123, 255, 0.5));
+}
+
+
+.timeline-item {
+    padding: 1rem 0;
+    position: relative;
+    width: 50%;
+    margin-bottom: 3rem;
+    opacity: 0.3;
+    transition: opacity 0.5s ease;
+}
+
+.timeline-item.in-view {
+    opacity: 1;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+    padding-right: 4rem;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+    padding-left: 4rem;
+    text-align: left;
+}
+
+.timeline-dot {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--clr-accent);
+    border-radius: 50%;
+    top: 1.5rem;
+    z-index: 2;
+    border: 4px solid var(--clr-background-primary);
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.3);
+}
+
+.timeline-item:nth-child(odd) .timeline-dot {
+    right: -10px;
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+    left: -10px;
+}
+
+.timeline-content {
+    background-color: var(--clr-background-primary);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px var(--clr-shadow-medium);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px var(--clr-shadow-strong);
+}
+
+.timeline-content h3 {
+    font-size: 1.6rem;
+    color: var(--clr-text-primary);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.01em;
+}
+
+.timeline-meta {
+    font-size: 0.95rem;
+    color: var(--clr-text-tertiary);
+    margin-bottom: 1rem;
+}
+
+.timeline-content ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.timeline-content ul li {
+    font-size: 1rem;
+    color: var(--clr-text-secondary);
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+    line-height: 1.6;
+}
+
+.timeline-content ul li::before {
+    content: '•';
+    color: var(--clr-accent);
+    position: absolute;
+    left: 0;
+    font-weight: var(--fw-bold);
+    font-size: 1.2em;
+    line-height: 1;
+}
+
+/* ------------------------------------------- */
+/* 5. Key Achievements Section                 */
+/* ------------------------------------------- */
+.achievements-section {
+    padding: 10rem 0;
+    text-align: center;
+}
+.achievements-section h2{
+    color: white;
+}
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    margin-top: 5rem;
+}
+
+
+/* ------------------------------------------- */
+/* 6. Projects Section Styles                  */
+/* ------------------------------------------- */
+.projects-section {
+    padding: 10rem 0;
+    text-align: center;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3.5rem;
+    margin-top: 5rem;
+}
+
+
+/* ------------------------------------------- */
+/* 7. Blog Section Styles                      */
+/* ------------------------------------------- */
+.blog-section {
+    padding: 10rem 0;
+    text-align: center;
+}
+.blog-section h2{
+    color: white;
+}
+.blog-content h3 {
+    margin-bottom: 1rem;
+    color: var(--clr-text-primary);
+    font-size: 2.5rem;
+}
+
+.blog-content p {
+    font-size: var(--fs-body);
+    color: white;
+    max-width: 750px;
+    margin: 1rem auto 3.5rem auto;
+}
+
+/* ------------------------------------------- */
+/* 8. Contact Section Styles                   */
+/* ------------------------------------------- */
+.contact-section {
+    padding: 10rem 0;
+    text-align: center;
+}
+
+.contact-content p {
+    font-size: var(--fs-body);
+    color: var(--clr-text-secondary);
+    max-width: 750px;
+    margin: 1rem auto 3rem auto;
+}
+
+.contact-email {
+    font-size: 1.4rem;
+    font-weight: var(--fw-semibold);
+    margin-bottom: 3.5rem;
+}
+
+.contact-email a {
+    color: var(--clr-accent);
+}
+
+
+/* ------------------------------------------- */
+/* New: Contact Form Styles                    */
+/* ------------------------------------------- */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px; /* Limit form width on larger screens */
+    margin: 0 auto; /* Center the form */
+    gap: 1.5rem; /* Space between form elements */
+    padding: 2rem; /* Internal padding for the form container */
+    background-color: var(--clr-background-primary); /* White background for the form itself */
+    border-radius: 15px; /* Rounded corners for the form */
+    box-shadow: 0 10px 30px var(--clr-shadow-medium); /* Subtle shadow */
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%; /* Full width within the form */
+    padding: 1rem 1.2rem;
+    border: 1px solid var(--clr-border); /* Light grey border */
+    border-radius: 10px; /* Rounded input fields */
+    font-family: var(--ff-primary);
+    font-size: 1rem;
+    color: var(--clr-text-primary);
+    background-color: var(--clr-background-secondary); /* Light grey background for inputs */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    -webkit-appearance: none; /* Remove default iOS styling */
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.contact-form input[type="text"]::placeholder,
+.contact-form input[type="email"]::placeholder,
+.contact-form textarea::placeholder {
+    color: var(--clr-text-tertiary); /* Lighter placeholder text */
+    opacity: 1; /* Ensure full opacity for placeholder */
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    outline: none; /* Remove default outline */
+    border-color: var(--clr-accent); /* Accent color on focus */
+    box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.2); /* Subtle blue glow on focus */
+    background-color: var(--clr-background-primary); /* White background on focus */
+}
+
+.contact-form textarea {
+    resize: vertical; /* Allow vertical resizing only */
+    min-height: 120px; /* Minimum height for textarea */
+}
+
+.contact-form .button-primary {
+    width: auto; /* Allow button to size based on content */
+    align-self: flex-start; /* Align button to the start of the flex container */
+    padding: 1rem 2.5rem; /* More generous padding for the button */
+    font-size: 1.1rem;
+    border-radius: 12px;
+}
+
+.contact-form .button-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px var(--clr-shadow-strong);
+}
+/* ------------------------------------------- */
+/* 9. Footer Styles                           */
+/* ------------------------------------------- */
+
+.site-footer {
+    background-color: var(--clr-text-primary);
+    color: var(--clr-background-primary);
+    text-align: center;
+    padding: 3rem 0;
+    font-size: 1rem;
+    font-weight: var(--fw-light);
+}

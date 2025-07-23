@@ -1,0 +1,436 @@
+/* styles/component.css */
+
+/* ------------------------------------------- */
+/* 1. Buttons                                  */
+/* ------------------------------------------- */
+.button {
+    display: inline-block;
+    padding: 1.1rem 2.5rem; /* More padding for a substantial feel */
+    border-radius: 10px; /* More rounded */
+    font-weight: var(--fw-medium); /* Slightly lighter weight for buttons */
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-size: var(--fs-base);
+    border: 2px solid transparent; /* Default transparent border */
+    box-shadow: 0 5px 15px var(--clr-shadow-light); /* Subtle button shadow */
+}
+
+.button-primary {
+    background-color: var(--clr-accent);
+    color: var(--clr-background-primary);
+    border-color: var(--clr-accent);
+}
+
+.button-primary:hover {
+    background-color: var(--clr-accent-hover);
+    border-color: var(--clr-accent-hover);
+    transform: translateY(-4px); /* More pronounced lift */
+    box-shadow: 0 10px 20px var(--clr-shadow-medium);
+}
+
+.button-secondary {
+    background-color: transparent;
+    color: var(--clr-accent);
+    border-color: var(--clr-accent);
+}
+
+.button-secondary:hover {
+    background-color: var(--clr-accent);
+    color: var(--clr-background-primary);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px var(--clr-shadow-medium);
+}
+
+.button-tertiary {
+    background-color: var(--clr-background-primary);
+    color: var(--clr-text-primary);
+    border-color: var(--clr-border);
+    box-shadow: 0 5px 15px var(--clr-shadow-light);
+}
+
+.button-tertiary:hover {
+    background-color: var(--clr-background-secondary);
+    border-color: var(--clr-accent);
+    color: var(--clr-accent);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px var(--clr-shadow-medium);
+}
+
+.button-small {
+    padding: 0.8rem 1.6rem;
+    font-size: 0.95rem;
+    border-radius: 8px;
+}
+
+/* ------------------------------------------- */
+/* 2. Header & Desktop Navigation              */
+/* ------------------------------------------- */
+
+.site-header {
+    background-color: var(--clr-background-primary);
+    padding: 1.8rem 0; /* More padding */
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 5px 20px var(--clr-shadow-light); /* Clearer shadow */
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-logo {
+    height: 50px; /* Larger logo */
+    width: auto;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 3.5rem; /* More space between navigation items */
+}
+
+.main-nav a {
+    font-weight: var(--fw-medium); /* Slightly lighter weight for nav links */
+    color: var(--clr-text-primary);
+    position: relative;
+    padding-bottom: 0.5rem; /* More space for underline effect */
+    font-size: 1.1rem;
+}
+
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    left: 50%; /* Start from center */
+    transform: translateX(-50%); /* Center the underline */
+    background: var(--clr-accent);
+    transition: width 0.3s ease; /* Only animate width */
+}
+
+.main-nav a:hover::after,
+.main-nav a.active::after {
+    width: 100%;
+}
+
+/* Hamburger for fullscreen menu (hidden on desktop, shown on mobile via bottom nav) */
+.nav-toggle-fullscreen {
+    display: none; /* Always hidden on desktop, only used for JS toggle */
+}
+
+
+
+/* ------------------------------------------- */
+/* 4. Mobile Fixed Bottom Navigation           */
+/* ------------------------------------------- */
+.nav-bottom-mobile {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--clr-background-primary);
+    box-shadow: 0 -5px 20px var(--clr-shadow-light); /* Shadow on top */
+    z-index: 900; /* Below fullscreen menu, above content */
+    display: none; /* Hidden by default, shown on mobile via media query */
+    padding: 0.8rem 0; /* Vertical padding */
+    border-top-left-radius: 15px; /* Subtle rounded corners */
+    border-top-right-radius: 15px;
+}
+
+.nav-bottom-mobile ul {
+    display: flex;
+    justify-content: space-around; /* Distribute items evenly */
+    align-items: center;
+    list-style: none;
+    width: 100%;
+    padding: 0 0.5rem; /* Slightly less padding */
+}
+
+.nav-bottom-mobile li {
+    flex: 1; /* Equal width for each item */
+    text-align: center;
+}
+
+/* Styling for nav items (links and the menu button) */
+.nav-bottom-mobile a,
+.nav-bottom-mobile .nav-toggle-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center content vertically */
+    gap: 0.2rem; /* Reduced space between icon and text */
+    color: var(--clr-text-tertiary); /* Default color for inactive */
+    font-size: 0.75rem; /* Smaller font size */
+    font-weight: var(--fw-medium);
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 0.6rem 0.2rem; /* Adjusted padding for a compact feel */
+    border-radius: 12px; /* Nicer rounded corners for tap area */
+    min-height: 60px; /* Ensure consistent height for tap targets */
+    cursor: pointer; /* Indicate clickable */
+    border: none; /* Remove default button border */
+    background: none; /* Remove default button background */
+    width: 100%; /* Fill available width in li */
+}
+
+.nav-bottom-mobile a:hover,
+.nav-bottom-mobile a.active,
+.nav-bottom-mobile .nav-toggle-mobile:hover {
+    color: var(--clr-accent);
+    background-color: rgba(0, 123, 255, 0.05); /* Very light accent background on hover/active */
+}
+
+.nav-bottom-mobile a img {
+    width: 24px; /* Icon size */
+    height: 24px;
+    /* Filter to change SVG color dynamically based on text-tertiary */
+    filter: invert(50%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
+    transition: filter 0.3s ease;
+}
+
+.nav-bottom-mobile a:hover img,
+.nav-bottom-mobile a.active img,
+.nav-bottom-mobile .nav-toggle-mobile:hover img {
+    /* Filter to change SVG color dynamically to accent color */
+    filter: invert(39%) sepia(61%) saturate(2000%) hue-rotate(195deg) brightness(97%) contrast(101%);
+}
+
+/* Hamburger icon within the bottom nav toggle */
+.nav-bottom-mobile .nav-toggle-mobile {
+    display: none; /* Hide default hamburger bars, we use an icon img instead */
+}
+
+
+/* ------------------------------------------- */
+/* 5. Card Components (Skills, Projects, Achievements) */
+/* ------------------------------------------- */
+
+/* Shared Card Base Style */
+.skill-category-card,
+.project-card,
+.achievement-card {
+    background-color: var(--clr-background-primary);
+    border-radius: 15px; /* Consistent rounded corners */
+    box-shadow: 0 10px 30px var(--clr-shadow-medium); /* Consistent shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Ensures content respects border-radius */
+}
+
+.skill-category-card:hover,
+.project-card:hover,
+.achievement-card:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 20px 50px var(--clr-shadow-strong); /* More prominent shadow on hover */
+}
+
+/* Skill Category Card Specifics */
+.skill-category-card {
+    padding: 3rem; /* Generous padding */
+    text-align: center;
+}
+
+.skill-category-card h3 {
+    color: var(--clr-accent);
+    margin-bottom: 2.5rem;
+    font-size: 1.8rem;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.6rem;
+}
+
+.skill-category-card h3::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 80px;
+    height: 4px;
+    background-color: var(--clr-accent);
+    border-radius: 2px;
+}
+
+.skill-items-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-top: 2.5rem;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+}
+
+.skill-item img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0.8rem;
+    transition: transform 0.2s ease;
+}
+
+.skill-item:hover img {
+    transform: scale(1.15);
+}
+
+.skill-item span {
+    font-size: 1rem;
+    color: var(--clr-text-secondary);
+    font-weight: var(--fw-medium);
+    white-space: nowrap;
+}
+
+/* Project Card Specifics */
+.project-card {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-thumbnail {
+    width: 100%;
+    height: 280px; /* Taller image for better preview */
+    object-fit: cover;
+    border-bottom: 1px solid var(--clr-border);
+}
+
+.project-info {
+    padding: 2rem; /* Consistent padding inside info block */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem; /* Closer to date */
+    color: var(--clr-text-primary);
+}
+
+.project-date {
+    font-size: 0.95rem;
+    color: var(--clr-text-tertiary);
+    margin-bottom: 1rem;
+}
+
+.project-description {
+    font-size: 1.05rem;
+    color: var(--clr-text-secondary); /* Main body text color for description */
+    margin-bottom: 1.5rem; /* Space before links */
+    flex-grow: 1; /* Pushes links to bottom */
+    line-height: 1.6;
+}
+
+.project-links {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: auto; /* Ensures links are at the bottom */
+}
+
+/* Achievement Card Specifics */
+.achievement-card {
+    padding: 2.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.achievement-card img {
+    width: 60px; /* Icon size */
+    height: 60px;
+    margin-bottom: 1.5rem;
+    /* Filter to make icons accent colored */
+    filter: invert(39%) sepia(61%) saturate(2000%) hue-rotate(195deg) brightness(97%) contrast(101%);
+}
+
+.achievement-card h4 {
+    font-size: 1.4rem;
+    color: var(--clr-text-primary);
+    margin-bottom: 0.8rem;
+    font-weight: var(--fw-semibold);
+}
+
+.achievement-card p {
+    font-size: 1rem;
+    color: var(--clr-text-secondary);
+    line-height: 1.5;
+    margin-bottom: 0; /* No margin at bottom of last paragraph in card */
+}
+
+/* ------------------------------------------- */
+/* 6. Form Elements                            */
+/* ------------------------------------------- */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto 4rem auto;
+    gap: 1.8rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 1.4rem;
+    border: 1px solid var(--clr-border);
+    border-radius: 10px;
+    font-family: var(--ff-primary);
+    font-size: 1.1rem;
+    color: var(--clr-text-primary);
+    background-color: var(--clr-background-primary);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--clr-accent);
+    box-shadow: 0 0 0 5px rgba(0, 123, 255, 0.25);
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 180px;
+}
+
+.contact-form .button-primary {
+    align-self: flex-start;
+    width: auto;
+    min-width: 220px;
+}
+
+/* ------------------------------------------- */
+/* 7. Social Links                             */
+/* ------------------------------------------- */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-top: 3.5rem;
+}
+
+.social-links a img {
+    width: 45px;
+    height: 45px;
+    transition: transform 0.2s ease;
+}
+
+.social-links a:hover img {
+    transform: translateY(-5px);
+}

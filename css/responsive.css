@@ -1,0 +1,397 @@
+/* styles/responsive.css */
+
+/* ------------------------------------------- */
+/* 1. Responsive Adjustments                  */
+/* ------------------------------------------- */
+
+/* Tablets and smaller desktops (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 2rem;
+    }
+
+    :root {
+        --fs-h1: 3.8rem;
+        --fs-h2: 2.5rem;
+        --fs-h3: 1.8rem;
+        --fs-tagline: 1.5rem;
+        --fs-body: 1.1rem;
+    }
+
+    .section {
+        padding: 8rem 0;
+    }
+
+    /* Hero Section */
+    .hero-section {
+        min-height: 65vh; /* Desktop: 75vh (also applies to tablets) */
+    }
+
+    .hero-greeting {
+        font-size: 2rem;
+    }
+
+    .hero-title {
+        font-size: var(--fs-h1);
+    }
+
+    .hero-tagline {
+        font-size: var(--fs-tagline);
+    }
+
+    .main-nav ul {
+        gap: 2.5rem;
+    }
+
+    .hero-cta-buttons {
+        gap: 1.5rem;
+    }
+
+    /* About Section */
+    .about-content {
+        flex-direction: column; /* Stack image and text */
+        text-align: center;
+        gap: 4rem;
+    }
+
+    .about-text {
+        order: 2; /* Text below image */
+        max-width: 100%;
+    }
+
+    .about-image {
+        order: 1; /* Image above text */
+        margin-bottom: 2.5rem;
+        max-width: 350px;
+    }
+
+    .about-tools-logos {
+        margin-top: 6rem;
+    }
+
+    .about-tools-logos h3 {
+        font-size: 1.4rem;
+        margin-bottom: 2rem;
+    }
+
+    .tool-logos-grid {
+        gap: 2rem;
+    }
+
+    .tool-logos-grid img {
+        height: 50px;
+    }
+
+    /* Skills Section */
+    .skills-grid {
+        gap: 4rem;
+    }
+
+    .skill-category-card {
+        padding: 2.5rem;
+    }
+
+    .skill-item {
+        width: 90px;
+        height: 90px;
+    }
+
+    .skill-item img {
+        width: 55px;
+        height: 55px;
+    }
+
+    /* Timeline Section */
+    .timeline::before, .timeline-line {
+        left: 20px; /* Move line to left */
+        transform: translateX(0);
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 4rem; /* Space from new line position */
+        padding-right: 1rem; /* Adjust padding */
+        text-align: left !important; /* Force left align */
+    }
+
+    .timeline-item:nth-child(odd) {
+        left: 0;
+        padding-right: 1rem;
+    }
+
+    .timeline-item:nth-child(even) {
+        left: 0; /* Align all items to left */
+    }
+
+    .timeline-dot {
+        left: 10px !important; /* Align dot to new line position */
+        right: auto !important;
+    }
+
+    .timeline-content {
+        padding: 1.5rem;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.4rem;
+    }
+
+    .timeline-content ul li {
+        font-size: 0.95rem;
+    }
+
+    /* Achievements Section */
+    .achievements-grid {
+        gap: 2.5rem;
+    }
+
+    .achievement-card {
+        padding: 2rem;
+    }
+
+    .achievement-card img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .achievement-card h4 {
+        font-size: 1.2rem;
+    }
+
+    /* Projects Section */
+    .projects-grid {
+        gap: 2.5rem;
+    }
+
+    .project-thumbnail {
+        height: 220px;
+    }
+
+    .project-info {
+        padding: 1.5rem;
+    }
+
+    .project-card h3 {
+        font-size: 1.6rem;
+    }
+
+    .project-description {
+        font-size: 0.95rem;
+    }
+
+    .project-links {
+        gap: 1rem;
+    }
+
+    .project-links .button {
+        padding: 0.7rem 1.4rem;
+    }
+
+    /* Contact Section */
+    .contact-form {
+        padding: 0 1rem; /* Add padding to form on small screens */
+    }
+
+    .contact-form .button-primary {
+         align-self: center; /* Center button on mobile */
+         width: 90%;
+    }
+
+    .social-links {
+        gap: 1.5rem;
+    }
+
+    .social-links a img {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Footer */
+    .site-footer {
+        padding: 2rem 0;
+    }
+}
+
+/* Mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Adjust body padding to make space for the fixed bottom nav */
+    body {
+        padding-bottom: 80px; /* Height of .nav-bottom-mobile */
+    }
+
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    :root {
+        --fs-h1: 2.8rem;
+        --fs-h2: 2.2rem;
+        --fs-h3: 1.6rem;
+        --fs-tagline: 1.3rem;
+        --fs-body: 1rem;
+    }
+
+    .section {
+        padding: 6rem 0;
+    }
+
+    /* Header & Desktop Nav - HIDDEN ON MOBILE */
+    .site-header {
+        display: none;
+    }
+
+    /* Hero Section */
+    .hero-section {
+        min-height: 50vh; 
+        padding: 5rem 0;
+       
+    }
+
+    .hero-greeting {
+        font-size: 1.8rem;
+    }
+
+    .hero-title {
+        font-size: var(--fs-h1);
+    }
+
+    .hero-tagline {
+        font-size: var(--fs-tagline);
+    }
+
+    .hero-cta-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .button {
+        width: 85%; /* Make buttons wider on mobile */
+        margin: 0 auto; /* Center buttons */
+        padding: 0.9rem 1.8rem;
+    }
+
+    .about-text p, .section-description {
+        font-size: 0.95rem;
+    }
+    .about-tools-logos {
+    text-align: center;
+    padding-top: 1rem;
+    
+}
+
+
+    /* Mobile Fixed Bottom Nav - SHOW IT */
+    .nav-bottom-mobile {
+        display: flex; /* Show the fixed bottom nav */
+    }
+
+    /* Fullscreen Mobile Menu */
+    .mobile-menu-fullscreen .close-menu {
+        top: 2rem;
+        right: 2rem;
+        font-size: 3rem;
+    }
+
+    .mobile-menu-fullscreen li {
+        margin-bottom: 2.5rem;
+    }
+
+    .mobile-menu-fullscreen a {
+        font-size: 2.5rem;
+    }
+    .contact-form{
+        padding: 2rem;
+    }
+}
+
+/* Very small mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    :root {
+        --fs-h1: 2.5rem;
+        --fs-h2: 1.8rem;
+        --fs-h3: 1.4rem;
+        --fs-tagline: 1.1rem;
+        --fs-body: 0.95rem;
+    }
+
+    .section {
+        padding: 3rem 0;
+    }
+
+    .hero-title {
+        letter-spacing: normal;
+    }
+
+    .hero-cta-buttons {
+        flex-direction: column;
+    }
+
+    .button {
+        padding: 0.5rem;
+    }
+
+    .about-tools-logos h3 {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .tool-logos-grid {
+        gap: 1.5rem;
+    }
+
+    .tool-logos-grid img {
+        height: 40px;
+    }
+
+    .skill-item {
+        width: 70px;
+        height: 70px;
+    }
+
+    .skill-item img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .project-thumbnail {
+        height: 160px;
+    }
+
+    .project-card h3 {
+        font-size: 1.4rem;
+    }
+
+    .project-description {
+        font-size: 0.9rem;
+    }
+
+    .mobile-menu-fullscreen .close-menu {
+        top: 1.5rem;
+        right: 1.5rem;
+        font-size: 2.5rem;
+    }
+
+    .mobile-menu-fullscreen li {
+        margin-bottom: 2rem;
+    }
+
+    .mobile-menu-fullscreen a {
+        font-size: 2rem;
+    }
+
+    .nav-bottom-mobile a,
+    .nav-bottom-mobile .nav-toggle-mobile {
+        font-size: 0.7rem;
+        padding: 0.5rem 0.1rem;
+        min-height: 55px;
+    }
+
+    .nav-bottom-mobile a img {
+        width: 20px;
+        height: 20px;
+    }
+}

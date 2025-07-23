@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Adeshina Attoe | Frontend Developer Portfolio"/>
+     <link rel="icon" type="image/png" href="assets/images/adeshina_attoe_logo__1_-removebg-preview.png" />
+    <title>Adeshina Attoe | Frontend Developer</title>
+
+    <!-- Google Fonts: Poppins (for headings) and Inter (for body) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script> <!-- NEW: Three.js library -->
+
+    <!-- Main CSS files (modular structure as per your plan) -->
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/components.css"/>
+    <link rel="stylesheet" href="css/sections.css"/>
+    <link rel="stylesheet" href="css/responsive.css"/>
+</head>
+<body>
+    <canvas id="background-particles" class="background-particles-canvas"></canvas> <!-- This is your 3D canvas now -->
+    <!-- Header & Desktop Navigation (Sticky on top, hidden on mobile) -->
+    <header class="site-header">
+        <div class="container header-content">
+            <a href="#hero" class="logo-link">
+                <!-- Replace with your actual logo SVG/PNG -->
+                <img src="assets/images/adeshina_attoe_logo__1_-removebg-preview.png" alt="Adeshina Attoe Logo" class="site-logo">
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section Content -->
+        <section id="hero" class="hero-section">
+            <canvas id="starfield" class="hero-canvas"></canvas>
+            <div class="container hero-content">
+                <p class="hero-greeting"></p> <!-- For "Hello" typing effect -->
+                <h1 class="hero-title">Adeshina Attoe</h1>
+                <p class="hero-tagline gradient-text">Frontend Web Developer | UI Enthusiast | Code Craftsman</p>
+                <div class="hero-cta-buttons">
+                    <a href="#projects" class="button button-primary">View My Work</a>
+                    <a href="#contact" class="button button-secondary">Get In Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="about-section">
+            <div class="container about-content">
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <p>I'm a forward-thinking Frontend Web Developer with a strong focus on creating intuitive, user-friendly, and visually appealing digital experiences. With a background in Computer Science and a deep passion for modern web technologies, I specialize in turning ideas into responsive and engaging interfaces.</p>
+                    <p>I constantly evolve in the ever-changing landscape of web development, dedicated to writing clean code, improving performance, and ensuring seamless user interaction. I aim to bring clarity, functionality, and elegance to every project I work on.</p>
+                    <a href="assets/document/AdeshinaAttoeResume.pdf" target="_blank" class="button button-tertiary">Download CV</a>
+                </div>
+                <!-- Optional: Your photo 
+                <div class="about-image">
+                    <img src="assets/images/your-headshot.jpg" alt="Adeshina Attoe Headshot">
+                </div> -->
+            </div>
+            <!-- Optional: Developer tools or icons (will be styled as a row of logos) -->
+            <div class="container about-tools-logos">
+                <h3>My Go-To Tools</h3>
+                <div class="tool-logos-grid">
+                    <img src="https://img.icons8.com/?size=100&id=iFPHC1KfnoxC&format=png&color=000000" alt="VS Code">
+                    <img src="https://img.icons8.com/?size=100&id=AZOZNnY73haj&format=png&color=000000" alt="Git">
+                    <img src="https://img.icons8.com/?size=100&id=zfHRZ6i1Wg0U&format=png&color=000000" alt="Figma">
+                    <img src="https://img.icons8.com/?size=100&id=62452&format=png&color=000000" alt="Firebase">
+                    <img src="https://img.icons8.com/?size=100&id=wxveY8ONpmeM&format=png&color=000000" alt="Pixabay">
+                    
+                    <!-- Add more tool icons as needed -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills & Tech Stack Section -->
+        <section id="skills" class="skills-section light-bg-section">
+            <div class="container">
+                <h2>Skills & Tech Stack</h2>
+                <div class="skills-grid">
+                    <div class="skill-category-card">
+                        <h3>Languages & Frameworks</h3>
+                        <div class="skill-items-grid">
+                            <div class="skill-item"><img src="https://img.icons8.com/?size=100&id=20909&format=png&color=000000" alt="HTML5"><span>HTML5</span></div>
+                            <div class="skill-item"><img src="https://img.icons8.com/?size=100&id=21278&format=png&color=000000" alt="CSS3"><span>CSS3</span></div>
+                            <div class="skill-item"><img src="https://img.icons8.com/?size=100&id=108784&format=png&color=000000" alt="JavaScript"><span>JavaScript</span></div>
+                            <div class="skill-item"><img src="https://img.icons8.com/?size=100&id=bzf0DqjXFHIW&format=png&color=000000" alt="React.js"><span>React.js</span></div>
+                        </div>
+                    </div>
+                    <div class="skill-category-card">
+                        <h3>Tools & Platforms</h3>
+                        <div class="skill-items-grid">
+                            <div class="skill-item"><img src="https://img.icons8.com/?size=100&id=38389&format=png&color=000000" alt="Git"><span>Git</span></div>
+                            <div class="skill-item"><img src="https://img.icons8.com/?size=100&id=AZOZNnY73haj&format=png&color=000000"><span>GitHub</span></div>
+                            <div class="skill-item"><img src="https://img.icons8.com/?size=100&id=iFPHC1KfnoxC&format=png&color=000000" alt="VS Code"><span>VS Code</span></div>
+                            <div class="skill-item"><img src="https://img.icons8.com/?size=100&id=62452&format=png&color=000000" alt="Firebase"><span>Firebase</span></div>
+                            
+                        </div>
+                    </div>
+                    <div class="skill-category-card">
+                        <h3>Design & UI</h3>
+                        <div class="skill-items-grid">
+                            <div class="skill-item"><img src="https://img.icons8.com/?size=100&id=zfHRZ6i1Wg0U&format=png&color=000000" alt="Figma"><span>Figma</span></div>
+                            <div class="skill-item"><img src="https://img.icons8.com/?size=100&id=CIAZz2CYc6Kc&format=png&color=000000" alt="Tailwind CSS"><span>Tailwind CSS</span></div>
+                            <div class="skill-item"><img src="https://img.icons8.com/?size=100&id=KjPwn6Tz1iuz&format=png&color=000000" alt="Responsive Design"><span>Responsive</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section (Timeline Style) -->
+        <section id="experience" class="experience-section">
+            <div class="container">
+                <h2>Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-line"></div> <!-- This will be the dynamic line -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>Frontend Engineer — Freelance</h3>
+                            <p class="timeline-meta">Lagos, 2024 - Present</p>
+                            <ul>
+                                <li>Developed and deployed 10+ responsive websites and web applications for diverse clients, ensuring cross-browser compatibility and optimal performance.</li>
+                                <li>Collaborated with clients to translate business requirements into intuitive user interfaces, leveraging modern HTML5, CSS3, and JavaScript (React.js).</li>
+                                <li>Implemented responsive design principles, resulting in seamless experiences across mobile, tablet, and desktop devices.</li>
+                                <li>Managed version control using Git/GitHub, ensuring efficient collaboration and code integrity.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Add more experience items -->
+                     <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Digital Marketer — Zimcrest Technologies</h3>
+                        <p class="timeline-meta">Abuja, May - June 2025</p>
+                        <ul>
+                            <li>Developed and executed digital marketing campaigns across various platforms (social media, email) to enhance brand visibility.</li>
+                            <li>Analyzed campaign performance metrics to identify trends and optimize strategies for improved engagement and conversion rates.</li>
+                            <li>Created compelling content for online channels, ensuring alignment with brand voice and marketing objectives.</li>
+                            <li>Contributed to market research and competitive analysis to inform strategic digital initiatives.</li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section (Timeline Style) -->
+        <section id="education" class="education-section light-bg-section">
+            <div class="container">
+                <h2>Education</h2>
+                <div class="timeline">
+                    <div class="timeline-line"></div> <!-- This will be the dynamic line -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>B.Sc. Computer Science</h3>
+                            <p class="timeline-meta">Tai Solarin University, 2017 - 2024</p>
+                            <ul>
+                                <li>Specialized in Software Engineering and Web Technologies.</li>
+                                <li>Completed a capstone project on "Interactive Web Dashboards using React and D3.js".</li>
+                                <li>Relevant coursework: Data Structures, Algorithms, Database Management, Human-Computer Interaction.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Add more education items if applicable -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Achievements Section -->
+        <section id="achievements" class="achievements-section">
+            <div class="container">
+                <h2>Key Achievements</h2>
+                <div class="achievements-grid">
+                    <div class="achievement-card">
+                        <img src="https://img.icons8.com/?size=100&id=9378&format=png&color=000000" alt="Rocket Icon">
+                        <h4>Website Speed Optimization</h4>
+                        <p>Increased load speed by 30% via optimization</p>
+                    </div>
+                    <div class="achievement-card">
+                        <img src="https://img.icons8.com/?size=100&id=Ypr33pbtnzE9&format=png&color=000000" alt="Users Icon">
+                        <h4>Improved User Engagement</h4>
+                        <p>Designed and implemented intuitive UI flows that led to a 15% increase in user engagement metrics.</p>
+                    </div>
+                    <div class="achievement-card">
+                        <img src="https://img.icons8.com/?size=100&id=17912&format=png&color=000000" alt="Award Icon">
+                        <h4>Open Source Contribution</h4>
+                        <p>Contributed to a popular open-source React component library, improving accessibility features.</p>
+                    </div>
+                    <div class="achievement-card">
+                        <img src="https://img.icons8.com/?size=100&id=uTmwWqknzgPa&format=png&color=000000" alt="Lightbulb Icon">
+                        <h4>Innovative Solutions</h4>
+                        <p>Developed a custom animation library, reducing reliance on third-party dependencies by 20%.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section light-bg-section">
+            <div class="container">
+                <h2>Projects</h2>
+                <p class="section-description">A glimpse into some of the interfaces and applications I’ve crafted with passion, precision, and performance in mind.</p>
+
+                <div class="projects-grid">
+                    <!-- Project Card Example -->
+                    <div class="project-card">
+                        <img src="assets/images/senzyenterprises.github.io_Mindstack_index.html (1).png" alt="Mindstack Project Screenshot" class="project-thumbnail">
+                        <div class="project-info">
+                            <h3>Mindstack</h3>
+                            <p class="project-date">2025</p>
+                            <p class="project-description">MINDSTACK is a dynamic, full-stack e-learning platform designed to provide users with a rich and interactive experience for acquiring new skills and knowledge. It features a robust course management system, user authentication, and a detailed administrative dashboard for comprehensive platform oversight, built with React and Firebase.</p>
+                            <div class="project-links">
+                                <a class="button button-small">Live Demo →</a>
+                                 <a href="https://senzyenterprises.github.io/Mindstack/" target="_blank" class="button button-small button-secondary">GitHub</a> 
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Repeat project-card for each project -->
+                    <div class="project-card">
+                        <img src="assets/images/senzyenterprises.github.io_KingdomSites_ (3) (1).png" alt="KingdomSite Project Screenshot" class="project-thumbnail">
+                        <div class="project-info">
+                            <h3>KingdomSite</h3>
+                            <p class="project-date">2025</p>
+                            <p class="project-description">KINGDOMSITES is a modern web application I developed, empowering religious institutions with enhanced online outreach. Built with HTML5, CSS3, and JavaScript, it incorporates dynamic content loading, sermon video embeds, and a secure donation portal. This project significantly advanced my expertise in responsive front-end development and crafting data-driven user interfaces.</p>
+                            <div class="project-links">
+                               <a class="button button-small">Live Demo →</a>
+                                 <a href="https://senzyenterprises.github.io/KingdomSites/" target="_blank" class="button button-small button-secondary">GitHub</a> 
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="assets/images/senzyenterprises.github.io_Amora_ (1).png" alt="Amora Project Screenshot" class="project-thumbnail">
+                        <div class="project-info">
+                            <h3>Amora</h3>
+                            <p class="project-date">2025</p>
+                            <p class="project-description">AMORA is a modern matchmaking platform designed to help users discover meaningful connections. It features real-time private chats, smart matching, and secure Firebase authentication. With a sleek UI and mobile-first design, Amora makes love and friendship simple, safe, and interactive.</p>
+                            <div class="project-links">
+                               <a class="button button-small">Live Demo →</a>
+                                 <a href="https://senzyenterprises.github.io/Amora/" target="_blank" class="button button-small button-secondary">GitHub</a> 
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="assets/images/senzyenterprises.github.io_yumbrix_ (1).png" alt="Yumbrix Project Screenshot" class="project-thumbnail">
+                        <div class="project-info">
+                            <h3>Yumbrix</h3>
+                            <p class="project-date">2025</p>
+                            <p class="project-description">YUMBRIX is a sleek, mobile-responsive e-commerce platform designed for global product discovery and local comfort. It features smooth category navigation, promotional sliders, newsletter integration, and Firebase-powered newsletter storage. Built with clean UI/UX, it delivers a premium online shopping experience.
+                            </p>
+                            <div class="project-links">
+                               <a class="button button-small">Live Demo →</a>
+                                 <a href="https://senzyenterprises.github.io/yumbrix/" target="_blank" class="button button-small button-secondary">GitHub</a> 
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="assets/images/senzyenterprises.github.io_1_ (5) (1).png" alt="Senzy Enterprises Project Screenshot" class="project-thumbnail">
+                        <div class="project-info">
+                            <h3>Senzy Enterprises</h3>
+                            <p class="project-date">2025</p>
+                            <p class="project-description">SENZY ENTERPRISES is a creative-tech agency offering web development, branding kits, graphic design, and data solutions. We use modern tools like HTML, CSS, JavaScript, Firebase, Canva, and Figma to craft bold, functional digital experiences. Strategy meets creativity — built for impact.</p>
+                            <div class="project-links">
+                                <a class="button button-small">Live Demo →</a>
+                                 <a href="https://senzyenterprises.github.io/1/" target="_blank" class="button button-small button-secondary">GitHub</a> 
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="assets/images/senzy01.github.io_My-Elite-World_ (2) (1).png" alt="Behind the Smile Project Screenshot" class="project-thumbnail">
+                        <div class="project-info">
+                            <h3>Behind the Smile</h3>
+                            <p class="project-date">2025</p>
+                            <p class="project-description">MY ELITE WORLD(behind-the-smile), a unique platform where creativity meets real life. This project is built with React.js and designed to explore the world we live in — from daily life insights to global news and business inspiration built with React.js</p>
+                            <div class="project-links">
+                                <a class="button button-small">Live Demo →</a>
+                                 <a href="https://senzy01.github.io/My-Elite-World/" target="_blank" class="button button-small button-secondary">GitHub</a> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="blog-section">
+            <div class="container blog-content">
+                <h2>Blog — SenzyScript</h2>
+                <p>My dev blog on Hashnode — covering frontend tips, real-time projects, and lessons learned along my journey.</p>
+                <a href="https://senzyscripts.hashnode.dev" target="_blank" class="button button-primary">Visit My Blog →</a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section light-bg-section">
+            <div class="container contact-content">
+                <h2>Contact Me</h2>
+                <p>I'm open to freelance work, collaborations, or full-time roles. Let's build something amazing.</p>
+                <p class="contact-email">Email: <a href="mailto:angelsenzy12@gmail.com">angelsenzy12@gmail.com</a></p>
+                
+                <!-- Simple contact form placeholder -->
+<form class="contact-form" action="https://formspree.io/f/mjkoyldg" method="POST" target="_blank">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+    <button type="submit" class="button button-primary">Send Message</button>
+</form>
+
+                <!-- Social Media Links -->
+                <div class="social-links">
+                    <a href="https://github.com/Senzy01" target="_blank" aria-label="GitHub"><img src="https://img.icons8.com/?size=100&id=AZOZNnY73haj&format=png&color=000000" alt="GitHub"></a>
+                    <a href="https:www.linkedin.com/in/adeshina-attoe-1ab51b36a" target="_blank" aria-label="LinkedIn"><img src="https://img.icons8.com/?size=100&id=13930&format=png&color=000000" alt="LinkedIn"></a>
+                    <a href="https://x.com/senzywf?s=21" target="_blank" aria-label="Twitter/X"><img src="https://img.icons8.com/?size=100&id=phOKFKYpe00C&format=png&color=000000" alt="X (Twitter)"></a>
+                    <a href="https://www.tiktok.com/@senzymiles23" target="_blank" aria-label="TikTok"><img src="https://img.icons8.com/?size=100&id=118638&format=png&color=000000" alt="TikTok"></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Mobile Fixed Bottom Navigation (Visible only on mobile) -->
+    <nav class="nav-bottom-mobile">
+        <ul>
+            <li><a href="#about"><img src="https://img.icons8.com/?size=100&id=Ypr33pbtnzE9&format=png&color=000000" alt="About"><span>About</span></a></li>
+            <li><a href="#skills"><img src="https://img.icons8.com/?size=100&id=7692&format=png&color=000000" alt="Skills"><span>Skills</span></a></li>
+            <li><a href="#experience"><img src="https://img.icons8.com/?size=100&id=2784&format=png&color=000000" alt="Experience"><span>Exp.</span></a></li>
+            <li><a href="#projects"><img src="https://img.icons8.com/?size=100&id=53428&format=png&color=000000" alt="Projects"><span>Projects</span></a></li>
+            <li><a href="#blog"><img src="https://img.icons8.com/?size=100&id=6UIyI0qTHfth&format=png&color=000000" alt="Blog"><span>Blog</span></a></li>
+            <li>
+                <a href="#contact" class="nav-contact-button" aria-label="Contact Me">
+                    <img src="https://img.icons8.com/?size=100&id=63490&format=png&color=000000" alt="Contact"><span>Contact</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- END Mobile Fixed Bottom Navigation -->
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 Adeshina Attoe. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript file -->
+    <script src="js/main.js"></script>
+    <!-- Optional: Firebase config if needed -->
+    <!-- <script src="scripts/firebase-config.js"></script> -->
+</body>
+</html>

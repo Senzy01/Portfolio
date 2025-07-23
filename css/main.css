@@ -1,0 +1,159 @@
+/* styles/main.css */
+
+/* ------------------------------------------- */
+/* 1. Global Styles & CSS Variables          */
+/* ------------------------------------------- */
+
+:root {
+    /* Color Palette (Sophisticated Light Theme - Subhs.xyz inspired) */
+    --clr-background-primary: #FFFFFF; /* Pure white for main backgrounds */
+    --clr-background-secondary: #F9F9F9; /* Very subtle off-white for alternating sections/cards */
+    --clr-text-primary: #1A1A1A; /* Near black for main headings/text */
+    --clr-text-secondary: #4A4A4A; /* Dark gray for body text */
+    --clr-text-tertiary: #888888; /* Medium gray for secondary descriptions/small text */
+    --clr-accent: #007BFF; /* A vibrant, clean blue, matching subhs.xyz's primary accent */
+    --clr-accent-hover: #0056b3; /* Darker blue for hover states */
+    --clr-border: #EBEBEB; /* Very light gray for subtle borders */
+
+    /* Shadows (carefully matched to subhs.xyz's subtle depth) */
+    --clr-shadow-light: rgba(0, 0, 0, 0.03); /* Very subtle */
+    --clr-shadow-medium: rgba(0, 0, 0, 0.07); /* For cards, buttons */
+    --clr-shadow-strong: rgba(0, 0, 0, 0.1); /* For hover effects */
+
+    /* Typography */
+    --ff-primary: 'Inter', sans-serif; /* Main font for body and general text */
+    --ff-heading: 'Poppins', sans-serif; /* Stylish font for headings */
+    --ff-mono: 'Fira Code', monospace; /* For code snippets or special text */
+
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+
+    --fs-base: 1rem; /* 16px */
+    --fs-h1: 4.5rem;   /* Larger hero title for impact */
+    --fs-h2: 3rem; /* Section titles */
+    --fs-h3: 2rem; /* Sub-headings */
+    --fs-tagline: 1.8rem; /* Hero tagline */
+    --fs-body: 1.15rem; /* Main paragraph text, slightly larger for readability */
+}
+
+/* Base styles for a clean slate */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 100%; /* Ensures 1rem = 16px by default */
+}
+
+
+body {
+    font-family: var(--ff-primary);
+    line-height: 1.7;
+    color: var(--clr-text-secondary);
+    /* IMPORTANT: This line MUST be commented out or removed for particles to be visible */
+    /* background-color: var(--clr-background-primary); */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding-bottom: 0; /* Managed by media queries for mobile nav */
+    position: relative; /* Ensure body establishes a stacking context */
+    /* Added for robust height calculation for background particles */
+    min-height: 100vh;
+}
+
+/* Body Background Particles Canvas */
+/* Body Background Particles Canvas */
+.background-particles-canvas {
+    position: fixed; /* Fixed to viewport */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Cover full viewport width */
+    height: 100vh; /* Cover full viewport height */
+    z-index: -1; /* Ensure it's behind all content */
+    pointer-events: none; /* Allow clicks/interactions on elements above it */
+    display: block;
+    /* No background-color here, as the 3D scene will provide it */
+}
+/* General Text Styles */
+p {
+    margin-bottom: 1rem;
+    font-size: var(--fs-body);
+    line-height: 1.7;
+}
+
+/* Basic Link Styling */
+a {
+    color: var(--clr-accent);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--clr-accent-hover);
+}
+
+/* Image Reset */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Removes extra space below images */
+}
+
+/* Code/Monospace Text */
+code {
+    font-family: var(--ff-mono);
+    background-color: var(--clr-background-secondary);
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+    font-size: 0.9em;
+    color: var(--clr-text-primary);
+}
+
+
+/* ------------------------------------------- */
+/* 2. Layout & Reusable Components             */
+/* ------------------------------------------- */
+
+.container {
+    max-width: 1100px; /* Consistent with subhs.xyz's content width */
+    margin: 0 auto; /* Center the container */
+    padding: 0 2.5rem; /* Generous horizontal padding */
+}
+
+.section {
+    padding: 10rem 0; /* Very generous vertical padding for distinct sections */
+    position: relative; /* For potential animations/effects */
+}
+
+.light-bg-section {
+    background-color: var(--clr-background-secondary); /* Alternating light background */
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--ff-heading);
+    color: var(--clr-text-primary);
+    line-height: 1.2;
+    margin-bottom: 1.8rem; /* Spacing below headings */
+    font-weight: var(--fw-bold);
+    letter-spacing: -0.02em; /* Tighter letter spacing for headings */
+}
+
+h1 { font-size: var(--fs-h1); }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); font-weight: var(--fw-semibold); }
+
+/* Section Description */
+.section-description {
+    font-size: var(--fs-body);
+    color: var(--clr-text-tertiary);
+    max-width: 750px; /* Wider description for better flow */
+    margin: 0 auto 5rem auto; /* More space below description */
+    text-align: center;
+    line-height: 1.6;
+}
