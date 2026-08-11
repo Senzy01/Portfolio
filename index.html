@@ -3,364 +3,1754 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description" content="Adeshina Attoe | Frontend Developer Portfolio"/>
-     <link rel="icon" type="image/png" href="assets/images/adeshina_attoe_logo__1_-removebg-preview.png" />
-    <title>Adeshina Attoe | Frontend Developer</title>
 
-    <!-- Google Fonts: Poppins (for headings) and Inter (for body) -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script> <!-- NEW: Three.js library -->
+    <meta
+        name="description"
+        content="Adeshina Attoe | Full Stack Developer, Business & Operations Support Professional"
+    />
 
-    <!-- Main CSS files (modular structure as per your plan) -->
+    <meta
+        name="keywords"
+        content="Adeshina Attoe, Full Stack Developer, React Developer, JavaScript Developer, Node.js, Laravel, Firebase, Web Developer, Software Developer, Senzy Enterprises"
+    />
+
+    <meta name="author" content="Adeshina Attoe" />
+
+    <!-- Portfolio Favicon -->
+    <link
+        rel="icon"
+        type="image/png"
+        href="assets/images/adeshina_attoe_logo__1_-removebg-preview.png"
+    />
+
+    <title>Adeshina Attoe | Full Stack Developer</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&family=Dancing+Script:wght@400;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Existing CSS Architecture -->
     <link rel="stylesheet" href="css/main.css"/>
     <link rel="stylesheet" href="css/components.css"/>
     <link rel="stylesheet" href="css/sections.css"/>
     <link rel="stylesheet" href="css/responsive.css"/>
 </head>
+
 <body>
-    <canvas id="background-particles" class="background-particles-canvas"></canvas> <!-- This is your 3D canvas now -->
-    <!-- Header & Desktop Navigation (Sticky on top, hidden on mobile) -->
+
+    <!-- Background -->
+    <canvas
+        id="background-particles"
+        class="background-particles-canvas"
+    ></canvas>
+
+    <!-- ============================= -->
+    <!-- HEADER -->
+    <!-- ============================= -->
+
     <header class="site-header">
         <div class="container header-content">
-            <a href="#hero" class="logo-link">
-                <!-- Replace with your actual logo SVG/PNG -->
-                <img src="assets/images/adeshina_attoe_logo__1_-removebg-preview.png" alt="Adeshina Attoe Logo" class="site-logo">
+
+            <a href="#hero" class="logo-link" aria-label="Adeshina Attoe Home">
+
+                <img
+                    src="assets/images/adeshina_attoe_logo__1_-removebg-preview.png"
+                    alt="Adeshina Attoe Logo"
+                    class="site-logo"
+                >
+
             </a>
-            <nav class="main-nav">
+
+            <nav class="main-nav" aria-label="Main Navigation">
                 <ul>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#skills">Stack</a></li>
                     <li><a href="#experience">Experience</a></li>
+                    <li><a href="#achievements">Achievements</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#blog">Blog</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
+
         </div>
     </header>
 
+
     <main>
-        <!-- Hero Section Content -->
+
+        <!-- ============================= -->
+        <!-- HERO -->
+        <!-- ============================= -->
+
         <section id="hero" class="hero-section">
-            <canvas id="starfield" class="hero-canvas"></canvas>
+
+            <canvas
+                id="starfield"
+                class="hero-canvas"
+            ></canvas>
+
             <div class="container hero-content">
-                <p class="hero-greeting"></p> <!-- For "Hello" typing effect -->
-                <h1 class="hero-title">Adeshina Attoe</h1>
-                <p class="hero-tagline gradient-text">Frontend Web Developer | UI Enthusiast | Code Craftsman</p>
+
+                <p class="hero-greeting"></p>
+
+                <h1 class="hero-title">
+                    Adeshina Attoe
+                </h1>
+
+                <p class="hero-tagline gradient-text">
+                    Full Stack Developer • Business & Operations Support Professional
+                </p>
+
+                <p class="hero-description">
+                    Building complete digital experiences across frontend interfaces,
+                    backend systems, databases, APIs, dashboards, and business operations.
+                </p>
+
                 <div class="hero-cta-buttons">
-                    <a href="#projects" class="button button-primary">View My Work</a>
-                    <a href="#contact" class="button button-secondary">Get In Touch</a>
+
+                    <a
+                        href="#projects"
+                        class="button button-primary"
+                    >
+                        Explore My Work
+                    </a>
+
+                    <a
+                        href="#contact"
+                        class="button button-secondary"
+                    >
+                        Get In Touch
+                    </a>
+
                 </div>
+
             </div>
+
         </section>
 
-        <!-- About Me Section -->
+
+        <!-- ============================= -->
+        <!-- ABOUT -->
+        <!-- ============================= -->
+
         <section id="about" class="about-section">
+
             <div class="container about-content">
+
                 <div class="about-text">
+
                     <h2>About Me</h2>
-                    <p>I'm a forward-thinking Frontend Web Developer with a strong focus on creating intuitive, user-friendly, and visually appealing digital experiences. With a background in Computer Science and a deep passion for modern web technologies, I specialize in turning ideas into responsive and engaging interfaces.</p>
-                    <p>I constantly evolve in the ever-changing landscape of web development, dedicated to writing clean code, improving performance, and ensuring seamless user interaction. I aim to bring clarity, functionality, and elegance to every project I work on.</p>
-                    <a href="assets/document/AdeshinaAttoeResume.pdf" target="_blank" class="button button-tertiary">Download CV</a>
+
+                    <p>
+                        Most of what I know about software did not come from a lecture
+                        hall. It came from getting stuck on a problem, staying with it,
+                        understanding why it failed, and refusing to stop until it worked.
+                        That persistence, combined with a Computer Science background,
+                        has shaped the way I approach engineering.
+                    </p>
+
+                    <p>
+                        I build complete web applications across the stack, from responsive
+                        React interfaces and carefully structured HTML/CSS to backend
+                        services, APIs, authentication, databases, dashboards, and
+                        deployment. I enjoy understanding the entire journey of a system:
+                        how an interaction begins in the browser, travels through application
+                        logic, reaches a database, and ultimately produces something useful
+                        for the person using it.
+                    </p>
+
+                    <p>
+                        My experience also extends beyond software development. Working in
+                        administration and operations taught me the value of accurate
+                        documentation, clear communication, structured processes, dependable
+                        follow-through, and understanding how organizations actually operate.
+                        Those lessons now influence the systems I build and the way I work
+                        with people.
+                    </p>
+
+                    <p>
+                        Today, my work sits at the intersection of technology, business,
+                        and practical problem-solving. Through Senzy Enterprises, I am
+                        building digital products and exploring larger systems that turn
+                        complex organizational needs into useful technology.
+                    </p>
+
+                    <p>
+                        I am particularly interested in software that does more than look
+                        good. I want it to make work clearer, information easier to manage,
+                        decisions easier to make, and organizations more capable.
+                    </p>
+
+                    <a
+                        href="assets/document/AdeshinaAttoeResume.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="button button-tertiary"
+                    >
+                        View My CV
+                    </a>
+
                 </div>
-                <!-- Optional: Your photo 
-                <div class="about-image">
-                    <img src="assets/images/your-headshot.jpg" alt="Adeshina Attoe Headshot">
-                </div> -->
+
             </div>
-            <!-- Optional: Developer tools or icons (will be styled as a row of logos) -->
+
+
+            <!-- Tools -->
+
             <div class="container about-tools-logos">
-                <h3>My Go-To Tools</h3>
+
+                <h3>Tools I Work With</h3>
+
                 <div class="tool-logos-grid">
-                    <img src="https://img.icons8.com/?size=100&id=iFPHC1KfnoxC&format=png&color=000000" alt="VS Code">
-                    <img src="https://img.icons8.com/?size=100&id=AZOZNnY73haj&format=png&color=000000" alt="Git">
-                    <img src="https://img.icons8.com/?size=100&id=zfHRZ6i1Wg0U&format=png&color=000000" alt="Figma">
-                    <img src="https://img.icons8.com/?size=100&id=62452&format=png&color=000000" alt="Firebase">
-                    <img src="https://img.icons8.com/?size=100&id=wxveY8ONpmeM&format=png&color=000000" alt="Pixabay">
-                    
-                    <!-- Add more tool icons as needed -->
+
+                    <img
+                        src="https://img.icons8.com/?size=100&id=iFPHC1KfnoxC&format=png&color=000000"
+                        alt="Visual Studio Code"
+                    >
+
+                    <img
+                        src="https://img.icons8.com/?size=100&id=AZOZNnY73haj&format=png&color=000000"
+                        alt="GitHub"
+                    >
+
+                    <img
+                        src="https://img.icons8.com/?size=100&id=zfHRZ6i1Wg0U&format=png&color=000000"
+                        alt="Figma"
+                    >
+
+                    <img
+                        src="https://img.icons8.com/?size=100&id=62452&format=png&color=000000"
+                        alt="Firebase"
+                    >
+
+                    <img
+                        src="https://img.icons8.com/?size=100&id=38389&format=png&color=000000"
+                        alt="Git"
+                    >
+
                 </div>
+
             </div>
+
         </section>
 
-        <!-- Skills & Tech Stack Section -->
+
+        <!-- ============================= -->
+        <!-- SKILLS -->
+        <!-- ============================= -->
+
         <section id="skills" class="skills-section light-bg-section">
+
             <div class="container">
-                <h2>Skills & Tech Stack</h2>
+
+                <h2>Technical & Professional Stack</h2>
+
+                <p class="section-description">
+                    A practical toolkit developed across software engineering,
+                    product development, administration, operations, and digital marketing.
+                </p>
+
+
+                <!-- FRONTEND -->
+
                 <div class="skills-grid">
+
                     <div class="skill-category-card">
-                        <h3>Languages & Frameworks</h3>
+
+                        <h3>Frontend Engineering</h3>
+
                         <div class="skill-items-grid">
-                            <div class="skill-item"><img src="https://img.icons8.com/?size=100&id=20909&format=png&color=000000" alt="HTML5"><span>HTML5</span></div>
-                            <div class="skill-item"><img src="https://img.icons8.com/?size=100&id=21278&format=png&color=000000" alt="CSS3"><span>CSS3</span></div>
-                            <div class="skill-item"><img src="https://img.icons8.com/?size=100&id=108784&format=png&color=000000" alt="JavaScript"><span>JavaScript</span></div>
-                            <div class="skill-item"><img src="https://img.icons8.com/?size=100&id=bzf0DqjXFHIW&format=png&color=000000" alt="React.js"><span>React.js</span></div>
+
+                            <div class="skill-item">
+                                <img
+                                    src="https://img.icons8.com/?size=100&id=20909&format=png&color=000000"
+                                    alt="HTML5"
+                                >
+                                <span>HTML5</span>
+                            </div>
+
+                            <div class="skill-item">
+                                <img
+                                    src="https://img.icons8.com/?size=100&id=21278&format=png&color=000000"
+                                    alt="CSS3"
+                                >
+                                <span>CSS3</span>
+                            </div>
+
+                            <div class="skill-item">
+                                <img
+                                    src="https://img.icons8.com/?size=100&id=108784&format=png&color=000000"
+                                    alt="JavaScript"
+                                >
+                                <span>JavaScript</span>
+                            </div>
+
+                            <div class="skill-item">
+                                <img
+                                    src="https://img.icons8.com/?size=100&id=bzf0DqjXFHIW&format=png&color=000000"
+                                    alt="React"
+                                >
+                                <span>React.js</span>
+                            </div>
+
+                            <div class="skill-item">
+                                <img
+                                    src="https://img.icons8.com/?size=100&id=4PiNHtUJVbLs&format=png&color=000000"
+                                    alt="Tailwind CSS"
+                                >
+                                <span>Tailwind CSS</span>
+                            </div>
+
+                            <div class="skill-item">
+                                <img
+                                    src=https://img.icons8.com/?size=100&id=ZMc42tPbG32H&format=png&color=000000
+                                    alt="Bootstrap"
+                                >
+                                <span>Bootstrap</span>
+                            </div>
+
+                            <div class="skill-item">
+                                <img
+                                    src=https://img.icons8.com/?size=100&id=KjPwn6Tz1iuz&format=png&color=000000
+                                    alt="Responsive Design"
+                                >
+                                <span>Responsive Design</span>
+                            </div>
+
+                            <div class="skill-item">
+                                <img
+                                    src="https://img.icons8.com/?size=100&id=OXfVlpOmrZeg&format=png&color=000000"
+                                    alt="UI / UX"
+                                >
+                                <span>UI / UX</span>
+                            </div>
+
                         </div>
+
                     </div>
+
+
+                    <!-- BACKEND -->
+
                     <div class="skill-category-card">
-                        <h3>Tools & Platforms</h3>
+
+                        <h3>Backend & APIs</h3>
+
                         <div class="skill-items-grid">
-                            <div class="skill-item"><img src="https://img.icons8.com/?size=100&id=38389&format=png&color=000000" alt="Git"><span>Git</span></div>
-                            <div class="skill-item"><img src="https://img.icons8.com/?size=100&id=AZOZNnY73haj&format=png&color=000000"><span>GitHub</span></div>
-                            <div class="skill-item"><img src="https://img.icons8.com/?size=100&id=iFPHC1KfnoxC&format=png&color=000000" alt="VS Code"><span>VS Code</span></div>
-                            <div class="skill-item"><img src="https://img.icons8.com/?size=100&id=62452&format=png&color=000000" alt="Firebase"><span>Firebase</span></div>
-                            
+
+                            <div class="skill-item">
+                                <img
+                                    src="https://img.icons8.com/?size=100&id=ouWtcsgDBiwO&format=png&color=000000"
+                                    alt="Node.js"
+                                >
+                                <span>Node.js</span>
+                            </div>
+
+                            <div class="skill-item">
+                                <img
+                                    src="https://img.icons8.com/?size=100&id=13460&format=png&color=000000"
+                                    alt="PHP"
+                                >
+                                <span>PHP</span>
+                            </div>
+
+                            <div class="skill-item">
+                                <img
+                                    src="https://img.icons8.com/?size=100&id=hUvxmdu7Rloj&format=png&color=000000"
+                                    alt="Laravel"
+                                >
+                                <span>Laravel</span>
+                            </div>
+
+                            <div class="skill-item">
+                                <img
+                                    src="https://img.icons8.com/?size=100&id=N9EIGGdoOu0p&format=png&color=000000"
+                                    alt="REST APIs"
+                                >
+                                <span>REST APIs</span>
+                            </div>
+
+                            <div class="skill-item">
+                                <img
+                                    src="https://img.icons8.com/?size=100&id=21896&format=png&color=000000"
+                                    alt="API Integration"
+                                >
+                                <span>API Integration</span>
+                            </div>
+
+                            <div class="skill-item">
+                                <img
+                                    src="https://img.icons8.com/?size=100&id=T7ihh0Ikk7vR&format=png&color=000000"
+                                    alt="Authentication"
+                                >
+                                <span>Authentication</span>
+                            </div>
+
+                            <div class="skill-item">
+                                <img
+                                    src="https://img.icons8.com/?size=100&id=bQbX7tMYRcoT&format=png&color=000000"
+                                    alt="Server Logic"
+                                >
+                                <span>Server Logic</span>
+                            </div>
+
+                            <div class="skill-item">
+                                <img
+                                    src="https://img.icons8.com/?size=100&id=RXrON5kyN96A&format=png&color=000000"
+                                    alt="Database Logic"
+                                >
+                                <span>Database Logic</span>
+                            </div>
+
                         </div>
+
                     </div>
+
+
+                    <!-- DATABASE -->
+
                     <div class="skill-category-card">
-                        <h3>Design & UI</h3>
+
+                        <h3>Databases & Data</h3>
+
                         <div class="skill-items-grid">
-                            <div class="skill-item"><img src="https://img.icons8.com/?size=100&id=zfHRZ6i1Wg0U&format=png&color=000000" alt="Figma"><span>Figma</span></div>
-                            <div class="skill-item"><img src="https://img.icons8.com/?size=100&id=CIAZz2CYc6Kc&format=png&color=000000" alt="Tailwind CSS"><span>Tailwind CSS</span></div>
-                            <div class="skill-item"><img src="https://img.icons8.com/?size=100&id=KjPwn6Tz1iuz&format=png&color=000000" alt="Responsive Design"><span>Responsive</span></div>
+
+                            <div class="skill-item">
+                                <img
+                                    src="https://img.icons8.com/?size=100&id=62452&format=png&color=000000"
+                                    alt="Firebase"
+                                >
+                                <span>Firebase</span>
+                            </div>
+
+                            <div class="skill-item">
+                                <img
+                                    src="https://img.icons8.com/?size=100&id=SQEEoDcpUD6c&format=png&color=000000"
+                                    alt="Firestore"
+                                >
+                                <span>Firestore</span>
+                            </div>
+
+                            <div class="skill-item">
+                                <img
+                                    src="https://img.icons8.com/?size=100&id=cUn1sl6y4Whd&format=png&color=000000"
+                                    alt="Realtime Database"
+                                >
+                                <span>Realtime Database</span>
+                            </div>
+
+                            <div class="skill-item">
+                                <img
+                                    src="https://img.icons8.com/?size=100&id=39858&format=png&color=000000"
+                                    alt="MySQL"
+                                >
+                                <span>MySQL</span>
+                            </div>
+
+                            <div class="skill-item">
+                                <img
+                                    src="https://img.icons8.com/?size=100&id=LwQEs9KnDgIo&format=png&color=000000"
+                                    alt="PostgreSQL"
+                                >
+                                <span>PostgreSQL</span>
+                            </div>
+
+                            <div class="skill-item">
+                                <img
+                                    src="https://img.icons8.com/?size=100&id=Lbhe0pJ864SE&format=png&color=000000"
+                                    alt="Data Organization"
+                                >
+                                <span>Data Organization</span>
+                            </div>
+
+                            <div class="skill-item">
+                                <img
+                                    src="https://img.icons8.com/?size=100&id=114257&format=png&color=000000"
+                                    alt="Dashboards"
+                                >
+                                <span>Dashboards</span>
+                            </div>
+
+                            <div class="skill-item">
+                                <img
+                                    src="https://img.icons8.com/?size=100&id=IifXjauynx04&format=png&color=000000"
+                                    alt="Data Workflows"
+                                >
+                                <span>Data Workflows</span>
+                            </div>
+
                         </div>
+
                     </div>
+
+
+                    <!-- DEVELOPMENT TOOLS -->
+
+                    <div class="skill-category-card">
+
+                        <h3>Development & Tools</h3>
+
+                        <div class="skill-items-grid">
+
+                            <div class="skill-item">
+                                <img
+                                    src="https://img.icons8.com/?size=100&id=38389&format=png&color=000000"
+                                    alt="Git"
+                                >
+                                <span>Git</span>
+                            </div>
+
+                            <div class="skill-item">
+                                <img
+                                    src="https://img.icons8.com/?size=100&id=AZOZNnY73haj&format=png&color=000000"
+                                    alt="GitHub"
+                                >
+                                <span>GitHub</span>
+                            </div>
+
+                            <div class="skill-item">
+                                <img
+                                    src="https://img.icons8.com/?size=100&id=9OGIyU8hrxW5&format=png&color=000000"
+                                    alt="VS Code"
+                                >
+                                <span>VS Code</span>
+                            </div>
+
+                            <div class="skill-item">
+                                <img
+                                    src="https://img.icons8.com/?size=100&id=YO3YqSaTOu5K&format=png&color=000000"
+                                    alt="Vite"
+                                >
+                                <span>Vite</span>
+                            </div>
+
+                            <div class="skill-item">
+                                <img
+                                    src="https://img.icons8.com/?size=100&id=24895&format=png&color=000000"
+                                    alt="NPM"
+                                >
+                                <span>NPM</span>
+                            </div>
+
+                            <div class="skill-item">
+                                <img
+                                    src="https://img.icons8.com/?size=100&id=3HE8x5wkQAZ2&format=png&color=000000"
+                                    alt="Deployment"
+                                >
+                                <span>Deployment</span>
+                            </div>
+
+                            <div class="skill-item">
+                                <img
+                                    src="https://img.icons8.com/?size=100&id=f103Pm7GmbrD&format=png&color=000000"
+                                    alt="Debugging"
+                                >
+                                <span>Debugging</span>
+                            </div>
+
+                            <div class="skill-item">
+                                <img
+                                    src="https://img.icons8.com/?size=100&id=8SsCbh1eE7uS&format=png&color=000000"
+                                    alt="Testing"
+                                >
+                                <span>Testing</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- DESIGN -->
+
+                    <div class="skill-category-card">
+
+                        <h3>Product & Design</h3>
+
+                        <div class="skill-items-grid">
+
+                            <div class="skill-item">
+                                <img
+                                    src="https://img.icons8.com/?size=100&id=zfHRZ6i1Wg0U&format=png&color=000000"
+                                    alt="Figma"
+                                >
+                                <span>Figma</span>
+                            </div>
+
+                            <div class="skill-item">
+                                <img
+                                    src="https://img.icons8.com/?size=100&id=EZQdGLNeo7JI&format=png&color=000000"
+                                    alt="Canva"
+                                >
+                                <span>Canva</span>
+                            </div>
+
+                            <div class="skill-item">
+                                <img
+                                    src="https://img.icons8.com/?size=100&id=gFw7X5Tbl3ss&format=png&color=000000"
+                                    alt="UI Design"
+                                >
+                                <span>UI Design</span>
+                            </div>
+
+                            <div class="skill-item">
+                                <img
+                                    src="https://img.icons8.com/?size=100&id=gFw7X5Tbl3ss&format=png&color=000000"
+                                    alt="UX Design"
+                                >
+                                <span>UX Design</span>
+                            </div>
+
+                            <div class="skill-item">
+                                <img
+                                    src="https://img.icons8.com/?size=100&id=13444&format=png&color=000000"
+                                    alt="Prototyping"
+                                >
+                                <span>Prototyping</span>
+                            </div>
+
+                            <div class="skill-item">
+                                <img
+                                    src="https://img.icons8.com/?size=100&id=112183&format=png&color=000000"
+                                    alt="Product Architecture"
+                                >
+                                <span>Product Architecture</span>
+                            </div>
+
+                            <div class="skill-item">
+                                <img
+                                    src="https://img.icons8.com/?size=100&id=13556&format=png&color=000000"
+                                    alt="Technical Documentation"
+                                >
+                                <span>Technical Documentation</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- BUSINESS -->
+
+                    <div class="skill-category-card">
+
+                        <h3>Business, Admin & Marketing</h3>
+
+                        <div class="skill-items-grid">
+
+                            <div class="skill-item">
+                                <img
+                                    src="https://img.icons8.com/?size=100&id=11267&format=png&color=000000"
+                                    alt="Administrative Support"
+                                >
+                                <span>Administrative Support</span>
+                            </div>
+
+                            <div class="skill-item">
+                                <img
+                                    src="https://img.icons8.com/?size=100&id=XnWzmQe28IVf&format=png&color=000000"
+                                    alt="Operations"
+                                >
+                                <span>Operations</span>
+                            </div>
+
+                            <div class="skill-item">
+                                <img
+                                    src="https://img.icons8.com/?size=100&id=rt7E3Z37UZuZ&format=png&color=000000"
+                                    alt="Project Coordination"
+                                >
+                                <span>Project Coordination</span>
+                            </div>
+
+                            <div class="skill-item">
+                                <img
+                                    src="https://img.icons8.com/?size=100&id=5q03yt7kxHDr&format=png&color=000000"
+                                    alt="Records Management"
+                                >
+                                <span>Records Management</span>
+                            </div>
+
+                            <div class="skill-item">
+                                <img
+                                    src="https://img.icons8.com/?size=100&id=CMWts1cpsnVn&format=png&color=000000"
+                                    alt="Report Writing"
+                                >
+                                <span>Report Writing</span>
+                            </div>
+
+                            <div class="skill-item">
+                                <img
+                                    src="https://img.icons8.com/?size=100&id=GMEJcOd1mxsb&format=png&color=000000"
+                                    alt="Digital Marketing"
+                                >
+                                <span>Digital Marketing</span>
+                            </div>
+
+                            <div class="skill-item">
+                                <img
+                                    src="https://img.icons8.com/?size=100&id=QNjsAGAlpuNW&format=png&color=000000"
+                                    alt="SEO"
+                                >
+                                <span>SEO</span>
+                            </div>
+
+                            <div class="skill-item">
+                                <img
+                                    src="https://img.icons8.com/?size=100&id=103407&format=png&color=000000"
+                                    alt="Stakeholder Communication"
+                                >
+                                <span>Stakeholder Communication</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
                 </div>
+
             </div>
+
         </section>
 
-        <!-- Experience Section (Timeline Style) -->
+
+        <!-- ============================= -->
+        <!-- EXPERIENCE -->
+        <!-- ============================= -->
+
         <section id="experience" class="experience-section">
+
             <div class="container">
-                <h2>Experience</h2>
+
+                <h2>Professional Experience</h2>
+
+                <p class="section-description">
+                    Experience spanning software engineering, organizational operations,
+                    administration, and digital marketing.
+                </p>
+
                 <div class="timeline">
-                    <div class="timeline-line"></div> <!-- This will be the dynamic line -->
+
+                    <div class="timeline-line"></div>
+
+
+                    <!-- SENZY ENTERPRISES -->
+
                     <div class="timeline-item">
+
                         <div class="timeline-dot"></div>
+
                         <div class="timeline-content">
-                            <h3>Frontend Engineer — Freelance</h3>
-                            <p class="timeline-meta">Lagos, 2024 - Present</p>
+
+                            <h3>
+                                Founder & Full Stack Developer — Senzy Enterprises
+                            </h3>
+
+                            <p class="timeline-meta">
+                                Lagos, Nigeria • 2025 – Present
+                            </p>
+
                             <ul>
-                                <li>Developed and deployed 10+ responsive websites and web applications for diverse clients, ensuring cross-browser compatibility and optimal performance.</li>
-                                <li>Collaborated with clients to translate business requirements into intuitive user interfaces, leveraging modern HTML5, CSS3, and JavaScript (React.js).</li>
-                                <li>Implemented responsive design principles, resulting in seamless experiences across mobile, tablet, and desktop devices.</li>
-                                <li>Managed version control using Git/GitHub, ensuring efficient collaboration and code integrity.</li>
+
+                                <li>
+                                    Building Senzy Enterprises as a technology-focused
+                                    business delivering web development, digital products,
+                                    branding, creative services, and emerging data solutions.
+                                </li>
+
+                                <li>
+                                    Leading the complete software development lifecycle,
+                                    from product discovery and interface architecture
+                                    through frontend engineering, backend development,
+                                    database design, testing, deployment, and iteration.
+                                </li>
+
+                                <li>
+                                    Developing full-stack applications using modern
+                                    JavaScript technologies, React, APIs, Firebase,
+                                    databases, and supporting development tools.
+                                </li>
+
+                                <li>
+                                    Translating real business and organizational problems
+                                    into practical digital systems rather than treating
+                                    development as a purely visual exercise.
+                                </li>
+
+                                <li>
+                                    Designing the architecture and product direction of
+                                    Senzy Core, the company's flagship data and
+                                    organizational intelligence platform currently in development.
+                                </li>
+
+                                <li>
+                                    Managing product documentation, technical planning,
+                                    branding, deployment, project organization, and the
+                                    broader operational requirements involved in taking
+                                    a digital product from concept toward implementation.
+                                </li>
+
                             </ul>
+
+                            <p>
+                                <strong>Current Focus:</strong>
+                                Full-stack product engineering, SaaS development,
+                                organizational technology, data solutions, dashboards,
+                                automation, and Senzy Core.
+                            </p>
+
                         </div>
+
                     </div>
-                    <!-- Add more experience items -->
-                     <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Digital Marketer — Zimcrest Technologies</h3>
-                        <p class="timeline-meta">Abuja, May - June 2025</p>
-                        <ul>
-                            <li>Developed and executed digital marketing campaigns across various platforms (social media, email) to enhance brand visibility.</li>
-                            <li>Analyzed campaign performance metrics to identify trends and optimize strategies for improved engagement and conversion rates.</li>
-                            <li>Created compelling content for online channels, ensuring alignment with brand voice and marketing objectives.</li>
-                            <li>Contributed to market research and competitive analysis to inform strategic digital initiatives.</li>
-                        </ul>
+
+
+                    <!-- SRHIN FULL STACK -->
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-dot"></div>
+
+                        <div class="timeline-content">
+
+                            <h3>
+                                Full Stack Developer — Slum and Rural Health Initiative Network (SRHIN)
+                            </h3>
+
+                            <p class="timeline-meta">
+                                Ibadan, Nigeria • September 2025 – December 2025
+                            </p>
+
+                            <ul>
+
+                                <li>
+                                    Supported the organization's digital transformation
+                                    efforts through the development of practical web-based
+                                    tools and interfaces aligned with operational needs.
+                                </li>
+
+                                <li>
+                                    Worked across frontend and backend responsibilities,
+                                    connecting user-facing interfaces with application
+                                    logic, data structures, and supporting services.
+                                </li>
+
+                                <li>
+                                    Translated organizational requirements into usable
+                                    digital workflows, with attention to accessibility,
+                                    maintainability, and day-to-day usability.
+                                </li>
+
+                                <li>
+                                    Applied structured debugging and version-control
+                                    practices to investigate issues, refine functionality,
+                                    and maintain development consistency.
+                                </li>
+
+                                <li>
+                                    Contributed to technology-driven approaches for
+                                    organizing information and improving the efficiency
+                                    of internal processes.
+                                </li>
+
+                            </ul>
+
+                        </div>
+
                     </div>
+
+
+                    <!-- SRHIN ADMIN -->
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-dot"></div>
+
+                        <div class="timeline-content">
+
+                            <h3>
+                                Administrative Officer — Slum and Rural Health Initiative Network (SRHIN)
+                            </h3>
+
+                            <p class="timeline-meta">
+                                Ibadan, Nigeria • January 2026 – June 2026
+                            </p>
+
+                            <ul>
+
+                                <li>
+                                    Coordinated administrative processes, documentation,
+                                    records, correspondence, scheduling, and day-to-day
+                                    organizational support.
+                                </li>
+
+                                <li>
+                                    Maintained structured records and supported the
+                                    retrieval and organization of information required
+                                    for operational and reporting activities.
+                                </li>
+
+                                <li>
+                                    Supported communication and coordination across
+                                    stakeholders, helping ensure that administrative
+                                    responsibilities remained clear, traceable, and timely.
+                                </li>
+
+                                <li>
+                                    Contributed to reporting and organizational workflows
+                                    where accuracy, consistency, and attention to detail
+                                    were essential.
+                                </li>
+
+                                <li>
+                                    Strengthened practical understanding of how teams,
+                                    information, schedules, documentation, and operational
+                                    priorities interact within a working organization.
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ZIMCREST -->
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-dot"></div>
+
+                        <div class="timeline-content">
+
+                            <h3>
+                                Digital Marketer — Zimcrest Technologies
+                            </h3>
+
+                            <p class="timeline-meta">
+                                Abuja, Nigeria • April 2025 – June 2025
+                            </p>
+
+                            <ul>
+
+                                <li>
+                                    Supported digital marketing initiatives aimed at
+                                    strengthening online visibility, audience engagement,
+                                    and brand communication.
+                                </li>
+
+                                <li>
+                                    Contributed to content development, social media
+                                    activities, campaign planning, and digital outreach.
+                                </li>
+
+                                <li>
+                                    Reviewed campaign performance and audience signals
+                                    to support practical improvements to digital marketing
+                                    activities.
+                                </li>
+
+                                <li>
+                                    Participated in market research and competitive
+                                    observation to inform digital communication strategies.
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
                 </div>
-                </div>
+
             </div>
+
         </section>
 
-        <!-- Education Section (Timeline Style) -->
+
+        <!-- ============================= -->
+        <!-- EDUCATION -->
+        <!-- ============================= -->
+
         <section id="education" class="education-section light-bg-section">
+
             <div class="container">
+
                 <h2>Education</h2>
+
                 <div class="timeline">
-                    <div class="timeline-line"></div> <!-- This will be the dynamic line -->
+
+                    <div class="timeline-line"></div>
+
                     <div class="timeline-item">
+
                         <div class="timeline-dot"></div>
+
                         <div class="timeline-content">
-                            <h3>B.Sc. Computer Science</h3>
-                            <p class="timeline-meta">Tai Solarin University, 2017 - 2024</p>
+
+                            <h3>
+                                B.Sc. Computer Science
+                            </h3>
+
+                            <p class="timeline-meta">
+                                Tai Solarin University of Education • 2017 – 2024
+                            </p>
+
                             <ul>
-                                <li>Specialized in Software Engineering and Web Technologies.</li>
-                                <li>Completed a capstone project on "Interactive Web Dashboards using React and D3.js".</li>
-                                <li>Relevant coursework: Data Structures, Algorithms, Database Management, Human-Computer Interaction.</li>
+
+                                <li>
+                                    Developed a foundation in software engineering,
+                                    programming, databases, algorithms, systems analysis,
+                                    and human-computer interaction.
+                                </li>
+
+                                <li>
+                                    Applied software development principles to practical
+                                    web and technology projects.
+                                </li>
+
+                                <li>
+                                    Developed an enduring interest in the relationship
+                                    between software, data, users, and organizational systems.
+                                </li>
+
                             </ul>
+
                         </div>
+
                     </div>
-                    <!-- Add more education items if applicable -->
+
                 </div>
+
             </div>
+
         </section>
 
-        <!-- Key Achievements Section -->
+
+        <!-- ============================= -->
+        <!-- ACHIEVEMENTS -->
+        <!-- ============================= -->
+
         <section id="achievements" class="achievements-section">
+
             <div class="container">
-                <h2>Key Achievements</h2>
+
+                <h2>Selected Achievements</h2>
+
+                <p class="section-description">
+                    A selection of capabilities and milestones developed through
+                    professional work, independent engineering, and product building.
+                </p>
+
                 <div class="achievements-grid">
+
+
                     <div class="achievement-card">
-                        <img src="https://img.icons8.com/?size=100&id=9378&format=png&color=000000" alt="Rocket Icon">
-                        <h4>Website Speed Optimization</h4>
-                        <p>Increased load speed by 30% via optimization</p>
+
+                        <img
+                            src="https://img.icons8.com/?size=100&id=9378&format=png&color=000000"
+                            alt="Product Development"
+                        >
+
+                        <h4>End-to-End Product Engineering</h4>
+
+                        <p>
+                            Progressed from frontend-focused development into full-stack
+                            engineering, working across interfaces, application logic,
+                            APIs, databases, authentication, debugging, and deployment.
+                        </p>
+
                     </div>
+
+
                     <div class="achievement-card">
-                        <img src="https://img.icons8.com/?size=100&id=Ypr33pbtnzE9&format=png&color=000000" alt="Users Icon">
-                        <h4>Improved User Engagement</h4>
-                        <p>Designed and implemented intuitive UI flows that led to a 15% increase in user engagement metrics.</p>
+
+                        <img
+                            src="https://img.icons8.com/?size=100&id=Ypr33pbtnzE9&format=png&color=000000"
+                            alt="Business Systems"
+                        >
+
+                        <h4>Technology Meets Operations</h4>
+
+                        <p>
+                            Combined software engineering with hands-on administrative
+                            experience, developing a practical understanding of how
+                            technology can simplify real organizational workflows.
+                        </p>
+
                     </div>
+
+
                     <div class="achievement-card">
-                        <img src="https://img.icons8.com/?size=100&id=17912&format=png&color=000000" alt="Award Icon">
-                        <h4>Open Source Contribution</h4>
-                        <p>Contributed to a popular open-source React component library, improving accessibility features.</p>
+
+                        <img
+                            src="https://img.icons8.com/?size=100&id=17912&format=png&color=000000"
+                            alt="Senzy Enterprises"
+                        >
+
+                        <h4>Built Senzy Enterprises</h4>
+
+                        <p>
+                            Established and continue to grow a technology-focused business
+                            bringing together software development, creative services,
+                            branding, and emerging data solutions.
+                        </p>
+
                     </div>
+
+
                     <div class="achievement-card">
-                        <img src="https://img.icons8.com/?size=100&id=uTmwWqknzgPa&format=png&color=000000" alt="Lightbulb Icon">
-                        <h4>Innovative Solutions</h4>
-                        <p>Developed a custom animation library, reducing reliance on third-party dependencies by 20%.</p>
+
+                        <img
+                            src="https://img.icons8.com/?size=100&id=uTmwWqknzgPa&format=png&color=000000"
+                            alt="Innovation"
+                        >
+
+                        <h4>Senzy Core — Flagship Product</h4>
+
+                        <p>
+                            Architecting Senzy Core, an ambitious SaaS and data-solutions
+                            platform designed to help organizations centralize information,
+                            improve workflows, and turn operational data into useful insight.
+                        </p>
+
                     </div>
+
+
                 </div>
+
             </div>
+
         </section>
 
-        <!-- Projects Section -->
+
+        <!-- ============================= -->
+        <!-- PROJECTS -->
+        <!-- ============================= -->
+
         <section id="projects" class="projects-section light-bg-section">
+
             <div class="container">
-                <h2>Projects</h2>
-                <p class="section-description">A glimpse into some of the interfaces and applications I’ve crafted with passion, precision, and performance in mind.</p>
+
+                <h2>Selected Projects</h2>
+
+                <p class="section-description">
+                    A growing body of digital products, applications, and systems built
+                    across software engineering, product design, and experimentation.
+                </p>
+
 
                 <div class="projects-grid">
-                    <!-- Project Card Example -->
-                    <div class="project-card">
-                        <img src="assets/images/senzyenterprises.github.io_Mindstack_index.html (1).png" alt="Mindstack Project Screenshot" class="project-thumbnail">
-                        <div class="project-info">
-                            <h3>Mindstack</h3>
-                            <p class="project-date">2025</p>
-                            <p class="project-description">MINDSTACK is a dynamic, full-stack e-learning platform designed to provide users with a rich and interactive experience for acquiring new skills and knowledge. It features a robust course management system, user authentication, and a detailed administrative dashboard for comprehensive platform oversight, built with React and Firebase.</p>
-                            <div class="project-links">
-                                <a class="button button-small">Live Demo →</a>
-                                 <a href="https://senzyenterprises.github.io/Mindstack/" target="_blank" class="button button-small button-secondary">GitHub</a> 
-                            </div>
-                        </div>
-                    </div>
 
-                    <!-- Repeat project-card for each project -->
-                    <div class="project-card">
-                        <img src="assets/images/senzyenterprises.github.io_KingdomSites_ (3) (1).png" alt="KingdomSite Project Screenshot" class="project-thumbnail">
-                        <div class="project-info">
-                            <h3>KingdomSite</h3>
-                            <p class="project-date">2025</p>
-                            <p class="project-description">KINGDOMSITES is a modern web application I developed, empowering religious institutions with enhanced online outreach. Built with HTML5, CSS3, and JavaScript, it incorporates dynamic content loading, sermon video embeds, and a secure donation portal. This project significantly advanced my expertise in responsive front-end development and crafting data-driven user interfaces.</p>
-                            <div class="project-links">
-                               <a class="button button-small">Live Demo →</a>
-                                 <a href="https://senzyenterprises.github.io/KingdomSites/" target="_blank" class="button button-small button-secondary">GitHub</a> 
-                            </div>
-                        </div>
-                    </div>
+
+                    <!-- SENZY CORE -->
 
                     <div class="project-card">
-                        <img src="assets/images/senzyenterprises.github.io_Amora_ (1).png" alt="Amora Project Screenshot" class="project-thumbnail">
-                        <div class="project-info">
-                            <h3>Amora</h3>
-                            <p class="project-date">2025</p>
-                            <p class="project-description">AMORA is a modern matchmaking platform designed to help users discover meaningful connections. It features real-time private chats, smart matching, and secure Firebase authentication. With a sleek UI and mobile-first design, Amora makes love and friendship simple, safe, and interactive.</p>
-                            <div class="project-links">
-                               <a class="button button-small">Live Demo →</a>
-                                 <a href="https://senzyenterprises.github.io/Amora/" target="_blank" class="button button-small button-secondary">GitHub</a> 
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="project-card">
-                        <img src="assets/images/senzyenterprises.github.io_yumbrix_ (1).png" alt="Yumbrix Project Screenshot" class="project-thumbnail">
                         <div class="project-info">
-                            <h3>Yumbrix</h3>
-                            <p class="project-date">2025</p>
-                            <p class="project-description">YUMBRIX is a sleek, mobile-responsive e-commerce platform designed for global product discovery and local comfort. It features smooth category navigation, promotional sliders, newsletter integration, and Firebase-powered newsletter storage. Built with clean UI/UX, it delivers a premium online shopping experience.
+
+                            <h3>Senzy Core</h3>
+
+                            <p class="project-date">
+                                2025 – Present • Flagship Product in Development
                             </p>
+
+                            <p class="project-description">
+                                Senzy Core is the flagship SaaS and data-solutions platform
+                                being developed under Senzy Enterprises. The product is
+                                designed around secure organizational data, information
+                                management, analytics, dashboards, intelligent assistance,
+                                automation, and operational workflows.
+                            </p>
+
                             <div class="project-links">
-                               <a class="button button-small">Live Demo →</a>
-                                 <a href="https://senzyenterprises.github.io/yumbrix/" target="_blank" class="button button-small button-secondary">GitHub</a> 
+
+                                <span class="button button-small">
+                                    Coming Soon
+                                </span>
+
                             </div>
+
                         </div>
+
                     </div>
 
+
+                    <!-- MINDSTACK -->
+
                     <div class="project-card">
-                        <img src="assets/images/senzyenterprises.github.io_1_ (5) (1).png" alt="Senzy Enterprises Project Screenshot" class="project-thumbnail">
+
+                        <img
+                            src="assets/images/senzyenterprises.github.io_Mindstack_index.html (1).png"
+                            alt="MindStack Project Screenshot"
+                            class="project-thumbnail"
+                        >
+
                         <div class="project-info">
+
+                            <h3>MindStack</h3>
+
+                            <p class="project-date">
+                                2025
+                            </p>
+
+                            <p class="project-description">
+                                A full-stack e-learning platform designed around course
+                                discovery, learning experiences, authentication, content
+                                management, and administrative oversight. The project
+                                strengthened practical experience with React, Firebase,
+                                application state, and dashboard-oriented interfaces.
+                            </p>
+
+                            <div class="project-links">
+
+                                <a
+                                    href="https://senzyenterprises.github.io/Mindstack/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="button button-small"
+                                >
+                                    Live Demo →
+                                </a>
+
+                                <a
+                                    href="https://github.com/Senzy01"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="button button-small button-secondary"
+                                >
+                                    GitHub
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- KINGDOMSITES -->
+
+                    <div class="project-card">
+
+                        <img
+                            src="assets/images/senzyenterprises.github.io_KingdomSites_ (3) (1).png"
+                            alt="KingdomSites Project Screenshot"
+                            class="project-thumbnail"
+                        >
+
+                        <div class="project-info">
+
+                            <h3>KingdomSites</h3>
+
+                            <p class="project-date">
+                                2025
+                            </p>
+
+                            <p class="project-description">
+                                A digital platform concept created for religious
+                                organizations, combining modern web presentation with
+                                content delivery, sermon media, organizational information,
+                                and online engagement features.
+                            </p>
+
+                            <div class="project-links">
+
+                                <a
+                                    href="https://senzyenterprises.github.io/KingdomSites/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="button button-small"
+                                >
+                                    Live Demo →
+                                </a>
+
+                                <a
+                                    href="https://github.com/Senzy01"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="button button-small button-secondary"
+                                >
+                                    GitHub
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- AMORA -->
+
+                    <div class="project-card">
+
+                        <img
+                            src="assets/images/senzyenterprises.github.io_Amora_ (1).png"
+                            alt="Amora Project Screenshot"
+                            class="project-thumbnail"
+                        >
+
+                        <div class="project-info">
+
+                            <h3>Amora</h3>
+
+                            <p class="project-date">
+                                2025
+                            </p>
+
+                            <p class="project-description">
+                                A social matchmaking application concept focused on
+                                meaningful connections, interactive user experiences,
+                                authentication, compatibility features, and private
+                                communication workflows.
+                            </p>
+
+                            <div class="project-links">
+
+                                <a
+                                    href="https://senzyenterprises.github.io/Amora/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="button button-small"
+                                >
+                                    Live Demo →
+                                </a>
+
+                                <a
+                                    href="https://github.com/Senzy01"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="button button-small button-secondary"
+                                >
+                                    GitHub
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- YUMBRIX -->
+
+                    <div class="project-card">
+
+                        <img
+                            src="assets/images/senzyenterprises.github.io_yumbrix_ (1).png"
+                            alt="Yumbrix Project Screenshot"
+                            class="project-thumbnail"
+                        >
+
+                        <div class="project-info">
+
+                            <h3>Yumbrix</h3>
+
+                            <p class="project-date">
+                                2025
+                            </p>
+
+                            <p class="project-description">
+                                A responsive e-commerce experience designed around
+                                product discovery, category navigation, promotional
+                                content, newsletter interaction, and Firebase-backed
+                                data handling.
+                            </p>
+
+                            <div class="project-links">
+
+                                <a
+                                    href="https://senzyenterprises.github.io/yumbrix/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="button button-small"
+                                >
+                                    Live Demo →
+                                </a>
+
+                                <a
+                                    href="https://github.com/Senzy01"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="button button-small button-secondary"
+                                >
+                                    GitHub
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- SENZY ENTERPRISES -->
+
+                    <div class="project-card">
+
+                        <img
+                            src="assets/images/senzyenterprises.github.io_1_ (5) (1).png"
+                            alt="Senzy Enterprises Project Screenshot"
+                            class="project-thumbnail"
+                        >
+
+                        <div class="project-info">
+
                             <h3>Senzy Enterprises</h3>
-                            <p class="project-date">2025</p>
-                            <p class="project-description">SENZY ENTERPRISES is a creative-tech agency offering web development, branding kits, graphic design, and data solutions. We use modern tools like HTML, CSS, JavaScript, Firebase, Canva, and Figma to craft bold, functional digital experiences. Strategy meets creativity — built for impact.</p>
+
+                            <p class="project-date">
+                                2025 – Present
+                            </p>
+
+                            <p class="project-description">
+                                The digital foundation of Senzy Enterprises, a technology
+                                and creative business focused on software development,
+                                branding, graphic design, digital experiences, and
+                                emerging data solutions.
+                            </p>
+
                             <div class="project-links">
-                                <a class="button button-small">Live Demo →</a>
-                                 <a href="https://senzyenterprises.github.io/1/" target="_blank" class="button button-small button-secondary">GitHub</a> 
+
+                                <a
+                                    href="https://senzyenterprises.github.io/1/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="button button-small"
+                                >
+                                    Live Demo →
+                                </a>
+
+                                <a
+                                    href="https://github.com/Senzy01"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="button button-small button-secondary"
+                                >
+                                    GitHub
+                                </a>
+
                             </div>
+
                         </div>
+
                     </div>
+
+
+                    <!-- BEHIND THE SMILE -->
 
                     <div class="project-card">
-                        <img src="assets/images/senzy01.github.io_My-Elite-World_ (2) (1).png" alt="Behind the Smile Project Screenshot" class="project-thumbnail">
+
+                        <img
+                            src="assets/images/senzy01.github.io_My-Elite-World_ (2) (1).png"
+                            alt="Behind the Smile Project Screenshot"
+                            class="project-thumbnail"
+                        >
+
                         <div class="project-info">
+
                             <h3>Behind the Smile</h3>
-                            <p class="project-date">2025</p>
-                            <p class="project-description">MY ELITE WORLD(behind-the-smile), a unique platform where creativity meets real life. This project is built with React.js and designed to explore the world we live in — from daily life insights to global news and business inspiration built with React.js</p>
+
+                            <p class="project-date">
+                                2025
+                            </p>
+
+                            <p class="project-description">
+                                A React-based information and content platform exploring
+                                everyday life, news, business ideas, and broader digital
+                                storytelling through an interactive web experience.
+                            </p>
+
                             <div class="project-links">
-                                <a class="button button-small">Live Demo →</a>
-                                 <a href="https://senzy01.github.io/My-Elite-World/" target="_blank" class="button button-small button-secondary">GitHub</a> 
+
+                                <a
+                                    href="https://senzy01.github.io/My-Elite-World/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="button button-small"
+                                >
+                                    Live Demo →
+                                </a>
+
+                                <a
+                                    href="https://github.com/Senzy01"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="button button-small button-secondary"
+                                >
+                                    GitHub
+                                </a>
+
                             </div>
+
                         </div>
+
                     </div>
+
                 </div>
+
             </div>
+
         </section>
 
-        <!-- Blog Section -->
+
+        <!-- ============================= -->
+        <!-- BLOG -->
+        <!-- ============================= -->
+
         <section id="blog" class="blog-section">
+
             <div class="container blog-content">
-                <h2>Blog — SenzyScript</h2>
-                <p>My dev blog on Hashnode — covering frontend tips, real-time projects, and lessons learned along my journey.</p>
-                <a href="https://senzyscripts.hashnode.dev" target="_blank" class="button button-primary">Visit My Blog →</a>
+
+                <h2>SenzyScript</h2>
+
+                <p>
+                    A technical journal documenting experiments, development lessons,
+                    project decisions, and the realities of building software from idea
+                    to implementation.
+                </p>
+
+                <a
+                    href="https://senzyscripts.hashnode.dev"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button button-primary"
+                >
+                    Visit My Blog →
+                </a>
+
             </div>
+
         </section>
 
-        <!-- Contact Section -->
+
+        <!-- ============================= -->
+        <!-- CONTACT -->
+        <!-- ============================= -->
+
         <section id="contact" class="contact-section light-bg-section">
-            <div class="container contact-content">
-                <h2>Contact Me</h2>
-                <p>I'm open to freelance work, collaborations, or full-time roles. Let's build something amazing.</p>
-                <p class="contact-email">Email: <a href="mailto:angelsenzy12@gmail.com">angelsenzy12@gmail.com</a></p>
-                
-                <!-- Simple contact form placeholder -->
-<form class="contact-form" action="https://formspree.io/f/mjkoyldg" method="POST" target="_blank">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-    <button type="submit" class="button button-primary">Send Message</button>
-</form>
 
-                <!-- Social Media Links -->
+            <div class="container contact-content">
+
+                <h2>Let's Build Something Useful</h2>
+
+                <p>
+                    Open to full-stack development opportunities, software engineering
+                    roles, product collaborations, technical projects, and opportunities
+                    where technology can solve meaningful business or organizational problems.
+                </p>
+
+                <p class="contact-email">
+                    Email:
+                    <a href="mailto:adeshinaattoe23@gmail.com">
+                        adeshinaattoe23@gmail.com
+                    </a>
+                </p>
+
+
+                <form
+                    class="contact-form"
+                    action="https://formspree.io/f/mjkoyldg"
+                    method="POST"
+                    target="_blank"
+                >
+
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Your Name"
+                        required
+                    >
+
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Your Email"
+                        required
+                    >
+
+                    <textarea
+                        name="message"
+                        placeholder="Your Message"
+                        rows="5"
+                        required
+                    ></textarea>
+
+                    <button
+                        type="submit"
+                        class="button button-primary"
+                    >
+                        Send Message
+                    </button>
+
+                </form>
+
+
+                <!-- SOCIAL LINKS -->
+
                 <div class="social-links">
-                    <a href="https://github.com/Senzy01" target="_blank" aria-label="GitHub"><img src="https://img.icons8.com/?size=100&id=AZOZNnY73haj&format=png&color=000000" alt="GitHub"></a>
-                    <a href="https:www.linkedin.com/in/adeshina-attoe-1ab51b36a" target="_blank" aria-label="LinkedIn"><img src="https://img.icons8.com/?size=100&id=13930&format=png&color=000000" alt="LinkedIn"></a>
-                    <a href="https://x.com/senzywf?s=21" target="_blank" aria-label="Twitter/X"><img src="https://img.icons8.com/?size=100&id=phOKFKYpe00C&format=png&color=000000" alt="X (Twitter)"></a>
-                    <a href="https://www.tiktok.com/@senzymiles23" target="_blank" aria-label="TikTok"><img src="https://img.icons8.com/?size=100&id=118638&format=png&color=000000" alt="TikTok"></a>
+
+                    <a
+                        href="https://github.com/Senzy01"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="GitHub"
+                    >
+                        <img
+                            src="https://img.icons8.com/?size=100&id=AZOZNnY73haj&format=png&color=000000"
+                            alt="GitHub"
+                        >
+                    </a>
+
+                    <a
+                        href="https://www.linkedin.com/in/adeshina-attoe-1ab51b36a"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="LinkedIn"
+                    >
+                        <img
+                            src="https://img.icons8.com/?size=100&id=13930&format=png&color=000000"
+                            alt="LinkedIn"
+                        >
+                    </a>
+
+                    <a
+                        href="https://x.com/senzywf?s=21"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="X"
+                    >
+                        <img
+                            src="https://img.icons8.com/?size=100&id=phOKFKYpe00C&format=png&color=000000"
+                            alt="X"
+                        >
+                    </a>
+
+                    <a
+                        href="https://www.tiktok.com/@senzymiles23"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="TikTok"
+                    >
+                        <img
+                            src="https://img.icons8.com/?size=100&id=118638&format=png&color=000000"
+                            alt="TikTok"
+                        >
+                    </a>
+
                 </div>
+
             </div>
+
         </section>
+
     </main>
 
-    <!-- Mobile Fixed Bottom Navigation (Visible only on mobile) -->
+
+    <!-- ============================= -->
+    <!-- MOBILE NAVIGATION -->
+    <!-- ============================= -->
+
     <nav class="nav-bottom-mobile">
+
         <ul>
-            <li><a href="#about"><img src="https://img.icons8.com/?size=100&id=Ypr33pbtnzE9&format=png&color=000000" alt="About"><span>About</span></a></li>
-            <li><a href="#skills"><img src="https://img.icons8.com/?size=100&id=7692&format=png&color=000000" alt="Skills"><span>Skills</span></a></li>
-            <li><a href="#experience"><img src="https://img.icons8.com/?size=100&id=2784&format=png&color=000000" alt="Experience"><span>Exp.</span></a></li>
-            <li><a href="#projects"><img src="https://img.icons8.com/?size=100&id=53428&format=png&color=000000" alt="Projects"><span>Projects</span></a></li>
-            <li><a href="#blog"><img src="https://img.icons8.com/?size=100&id=6UIyI0qTHfth&format=png&color=000000" alt="Blog"><span>Blog</span></a></li>
+
             <li>
-                <a href="#contact" class="nav-contact-button" aria-label="Contact Me">
-                    <img src="https://img.icons8.com/?size=100&id=63490&format=png&color=000000" alt="Contact"><span>Contact</span>
+                <a href="#about">
+                    <img
+                        src="https://img.icons8.com/?size=100&id=Ypr33pbtnzE9&format=png&color=000000"
+                        alt="About"
+                    >
+                    <span>About</span>
                 </a>
             </li>
-        </ul>
-    </nav>
-    <!-- END Mobile Fixed Bottom Navigation -->
 
-    <!-- Footer -->
+            <li>
+                <a href="#skills">
+                    <img
+                        src="https://img.icons8.com/?size=100&id=7692&format=png&color=000000"
+                        alt="Skills"
+                    >
+                    <span>Stack</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#experience">
+                    <img
+                        src="https://img.icons8.com/?size=100&id=2784&format=png&color=000000"
+                        alt="Experience"
+                    >
+                    <span>Exp.</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#projects">
+                    <img
+                        src="https://img.icons8.com/?size=100&id=53428&format=png&color=000000"
+                        alt="Projects"
+                    >
+                    <span>Work</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#blog">
+                    <img
+                        src="https://img.icons8.com/?size=100&id=6UIyI0qTHfth&format=png&color=000000"
+                        alt="Blog"
+                    >
+                    <span>Blog</span>
+                </a>
+            </li>
+
+            <li>
+                <a
+                    href="#contact"
+                    class="nav-contact-button"
+                    aria-label="Contact Me"
+                >
+                    <img
+                        src="https://img.icons8.com/?size=100&id=63490&format=png&color=000000"
+                        alt="Contact"
+                    >
+                    <span>Contact</span>
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- ============================= -->
+    <!-- FOOTER -->
+    <!-- ============================= -->
+
     <footer class="site-footer">
+
         <div class="container">
-            <p>&copy; 2025 Adeshina Attoe. All rights reserved.</p>
+
+            <p>
+                &copy; 2026 Adeshina Attoe. All rights reserved.
+            </p>
+
+            <p>
+                Full Stack Developer • Builder • Problem Solver
+            </p>
+
         </div>
+
     </footer>
 
-    <!-- Main JavaScript file -->
+
+    <!-- JavaScript -->
     <script src="js/main.js"></script>
-    <!-- Optional: Firebase config if needed -->
-    <!-- <script src="scripts/firebase-config.js"></script> -->
+
 </body>
 </html>
