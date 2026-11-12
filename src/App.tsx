@@ -504,7 +504,7 @@ function App() {
               </p>
               <a
                 className="text-link"
-                href="/assets/AdeshinaAttoeResume.pdf"
+                href="/assets/document/AdeshinaAttoeResume.pdf"
                 target="_blank"
                 rel="noreferrer"
               >
