@@ -1,0 +1,368 @@
+.train-journey {
+  position: relative;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+}
+
+.train-sticky-stage {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100svh;
+  overflow: hidden;
+  margin: 0;
+}
+
+
+.train-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.train-canvas canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.train-heading {
+  position: absolute;
+  z-index: 4;
+  top: 10%;
+  left: clamp(28px, 7vw, 110px);
+  width: min(690px, 54vw);
+  pointer-events: none;
+}
+
+.train-heading .eyebrow {
+  display: inline-block;
+  margin-bottom: 22px;
+  color: #c8bda4;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+}
+
+.train-heading h2 {
+  margin: 0;
+  font-size: clamp(3.6rem, 6.2vw, 6.8rem);
+  line-height: 0.91;
+  letter-spacing: -0.075em;
+  font-weight: 800;
+}
+
+.train-heading h2 span {
+  color: #a9a69c;
+}
+
+.train-heading p {
+  max-width: 430px;
+  margin-top: 22px;
+  color: #b5b2a8;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+/* One milestone at a time */
+
+.train-active-stop {
+  position: absolute;
+  z-index: 5;
+  right: clamp(28px, 7vw, 110px);
+  top: 36%;
+  width: min(460px, 37vw);
+  padding: 26px 28px;
+  border: 1px solid rgba(207, 197, 173, 0.25);
+  border-radius: 8px;
+  background: rgba(17, 17, 14, 0.88);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 20px 65px rgba(0, 0, 0, 0.3);
+  animation: milestone-arrive 0.55s ease both;
+}
+
+@keyframes milestone-arrive {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.train-stop-topline {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 25px;
+  color: #c8bda4;
+  font-size: 0.64rem;
+  letter-spacing: 0.15em;
+}
+
+.train-stop-year {
+  display: block;
+  color: #c8bda4;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.train-active-stop h3 {
+  margin: 12px 0 15px;
+  color: #f6f3eb;
+  font-size: clamp(2rem, 3.1vw, 3.3rem);
+  line-height: 1.02;
+  letter-spacing: -0.065em;
+}
+
+.train-active-stop > strong {
+  display: block;
+  color: #e3dfd4;
+  font-size: 1.12rem;
+  line-height: 1.5;
+}
+
+.train-stop-place {
+  display: block;
+  margin-top: 5px;
+  color: #a9a69c;
+  font-size: 0.91rem;
+}
+
+.train-active-stop > p {
+  margin: 20px 0;
+  color: #c2bfb5;
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.train-stop-highlight {
+  padding-top: 16px;
+  border-top: 1px solid rgba(207, 197, 173, 0.2);
+  color: #d0c4a8;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+/* Journey progress */
+
+.train-progress {
+  position: absolute;
+  z-index: 5;
+  left: clamp(28px, 7vw, 110px);
+  right: clamp(28px, 7vw, 110px);
+  bottom: 7%;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  color: #aaa79d;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+}
+
+.train-progress > div {
+  flex: 1;
+  height: 2px;
+  overflow: hidden;
+  background: rgba(210, 205, 190, 0.2);
+}
+
+.train-progress i {
+  display: block;
+  height: 100%;
+  background: #d0c4a8;
+  transition: width 0.12s linear;
+}
+
+.train-scroll-hint {
+  position: absolute;
+  z-index: 5;
+  left: clamp(28px, 7vw, 110px);
+  bottom: 12%;
+  color: #d0c4a8;
+  font-size: 0.67rem;
+  letter-spacing: 0.17em;
+}
+
+/* Mobile journey */
+
+.train-mobile-timeline {
+  display: none;
+}
+
+@media (max-width: 1200px) and (min-width: 761px) {
+  .train-heading {
+    top: 8%;
+    width: 52vw;
+  }
+
+  .train-heading h2 {
+    font-size: clamp(3.4rem, 5.8vw, 5rem);
+  }
+
+  .train-active-stop {
+    top: 47%;
+    right: 4%;
+    width: 39vw;
+    padding: 20px;
+  }
+
+  .train-active-stop h3 {
+    font-size: 2.1rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .train-journey {
+    height: auto;
+    min-height: 0;
+    padding: 85px 22px 65px;
+    overflow: hidden;
+  }
+
+  .train-sticky-stage {
+    position: relative;
+    top: auto;
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+  }
+
+  .train-heading {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    margin-bottom: 65px;
+  }
+
+  .train-heading .eyebrow {
+    font-size: 0.7rem;
+  }
+
+  .train-heading h2 {
+    font-size: clamp(3.1rem, 12vw, 4.8rem);
+  }
+
+  .train-heading p {
+    max-width: 390px;
+    font-size: 0.98rem;
+  }
+
+  .train-mobile-timeline {
+    display: block;
+    position: relative;
+    max-width: 580px;
+    margin: 0 auto;
+    padding-left: 27px;
+  }
+
+  .train-mobile-timeline::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    bottom: 12px;
+    left: 7px;
+    width: 1px;
+    background: linear-gradient(
+      to bottom,
+      #c8bda4,
+      rgba(200, 189, 164, 0.08)
+    );
+  }
+
+  .train-mobile-station {
+    position: relative;
+    display: grid;
+    grid-template-columns: 35px 1fr;
+    gap: 12px;
+    padding-bottom: 45px;
+  }
+
+  .train-mobile-station::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: -25px;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #c8bda4;
+    border-radius: 50%;
+    background: #10100e;
+  }
+
+  .train-mobile-number {
+    color: #c8bda4;
+    font-size: 0.75rem;
+  }
+
+  .train-mobile-station .eyebrow {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #c8bda4;
+    font-size: 0.67rem;
+    letter-spacing: 0.13em;
+  }
+
+  .train-mobile-station h3 {
+    margin: 0 0 12px;
+    color: #f3f1eb;
+    font-size: clamp(1.65rem, 7vw, 2.1rem);
+    line-height: 1.1;
+    letter-spacing: -0.05em;
+  }
+
+  .train-mobile-station strong {
+    display: block;
+    color: #e1ded5;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .train-mobile-station p {
+    margin: 9px 0 0;
+    color: #aaa79d;
+    font-size: 0.93rem;
+    line-height: 1.8;
+  }
+
+  .train-mobile-station .train-mobile-place {
+    color: #c8bda4;
+    font-size: 0.85rem;
+  }
+
+  .train-mobile-station .train-stop-highlight {
+    margin-top: 15px;
+    font-size: 0.78rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .train-active-stop {
+    animation: none;
+  }
+
+  .train-progress i {
+    transition: none;
+  }
+}
+
+.train-journey .train-active-stop {
+  transform: translateY(-2.5rem);
+}
+
+.train-journey .train-sticky-stage {
+  padding-top: 0;
+}
+
+.train-journey + section {
+  margin-top: 0;
+  padding-top: 4rem;
+}
