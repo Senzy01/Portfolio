@@ -1,0 +1,31 @@
+ .github/workflows/deploy.yml                       |   52 [32m+[m
+ .gitignore                                         |   24 [32m+[m
+ README.md                                          |  122 [32m+[m[31m-[m
+ eslint.config.js                                   |   21 [32m+[m
+ index.html                                         | 1787 [32m+[m[31m---------[m
+ package-lock.json                                  | 3614 [32m++++++++++++++++++++[m
+ package.json                                       |   37 [32m+[m
+ public/assets/document/AdeshinaAttoeResume.pdf     |  Bin [31m0[m -> [32m31299[m bytes
+ public/assets/images/Kingdomsites.png              |  Bin [31m0[m -> [32m571518[m bytes
+ .../adeshina_attoe_logo__1_-removebg-preview.png   |  Bin [31m0[m -> [32m17993[m bytes
+ public/assets/images/amora.png                     |  Bin [31m0[m -> [32m443144[m bytes
+ public/assets/images/behind-the-smile.png          |  Bin [31m0[m -> [32m2138938[m bytes
+ public/assets/images/mindstack.png                 |  Bin [31m0[m -> [32m1677098[m bytes
+ public/assets/images/senzy-core.png                |  Bin [31m0[m -> [32m1041804[m bytes
+ public/assets/images/senzy-enterprises.png         |  Bin [31m0[m -> [32m191827[m bytes
+ public/assets/images/yumbrix.png                   |  Bin [31m0[m -> [32m566316[m bytes
+ src/App-old.jsx                                    |  122 [32m+[m
+ src/App.css                                        |  184 [32m+[m
+ src/App.tsx                                        |  829 [32m+++++[m
+ src/components/CelebrationShine.tsx                |   71 [32m+[m
+ src/components/LiquidWater.tsx                     |  125 [32m+[m
+ src/components/MetalAssembly.tsx                   |  188 [32m+[m
+ src/components/TrainJourney.tsx                    |  687 [32m++++[m
+ src/index.css                                      |  111 [32m+[m
+ src/main-old.jsx                                   |   10 [32m+[m
+ src/main.tsx                                       |   17 [32m+[m
+ src/styles/globals.css                             | 1638 [32m+++++++++[m
+ src/styles/train-journey.css                       |  368 [32m++[m
+ src/vite-env.d.ts                                  |    1 [32m+[m
+ vite.config.js                                     |   13 [32m+[m
+ 30 files changed, 8162 insertions(+), 1859 deletions(-)

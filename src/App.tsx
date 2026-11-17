@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, lazy, Suspense } from "react";
 import {
   ArrowDown,
   ArrowDownRight,
@@ -20,9 +20,17 @@ import {
   Sparkles,
   X,
 } from "lucide-react";
-import MetalAssembly from "./components/MetalAssembly";
-import CelebrationShine from "./components/CelebrationShine";
-import TrainJourney from "./components/TrainJourney";
+const MetalAssembly = lazy(
+  () => import("./components/MetalAssembly")
+);
+
+const CelebrationShine = lazy(
+  () => import("./components/CelebrationShine")
+);
+
+const TrainJourney = lazy(
+  () => import("./components/TrainJourney")
+);
 const experiences = [
   {
     period: "AUG 2026 · CONTRACT",
@@ -177,6 +185,7 @@ const skillGroups = [
   },
 ];
 
+
 const projects = [
   {
     number: "01",
@@ -185,7 +194,7 @@ const projects = [
     year: "2025 — PRESENT",
     description:
       "An organisational software and data-solutions platform in development. Its direction is centred on bringing information, operational workflows and useful insights into a more structured environment through dashboards, access management and automation.",
-    image: "/assets/images/senzy-core.png",
+    image: `${import.meta.env.BASE_URL}assets/images/senzy-core.png`,
     link: "https://github.com/Senzyenterprises/senzy-core",
     linkLabel: "VIEW SOURCE",
     featured: true,
@@ -197,7 +206,7 @@ const projects = [
     year: "2025",
     description:
       "A digital learning experience exploring course discovery, learning content, authentication and administrative oversight. Built around an organised interface and Firebase-backed application workflows.",
-    image: "/assets/images/mindstack.png",
+    image: `${import.meta.env.BASE_URL}assets/images/mindstack.png`,
     link: "https://senzyenterprises.github.io/Mindstack/",
     linkLabel: "VISIT PROJECT",
   },
@@ -208,7 +217,7 @@ const projects = [
     year: "2025",
     description:
       "A platform concept for religious organisations, bringing together organisational information, content presentation, sermon media and online engagement in one web experience.",
-    image: "/assets/images/kingdomsites.png",
+    image: `${import.meta.env.BASE_URL}assets/images/Kingdomsites.png`,
     link: "https://senzyenterprises.github.io/KingdomSites/",
     linkLabel: "VISIT PROJECT",
   },
@@ -219,7 +228,7 @@ const projects = [
     year: "2025",
     description:
       "A relationship-focused digital experience exploring meaningful connections, interactive user experiences, compatibility features and private communication.",
-    image: "/assets/images/amora.png",
+    image: `${import.meta.env.BASE_URL}assets/images/amora.png`,
     link: "https://senzyenterprises.github.io/Amora/",
     linkLabel: "VISIT PROJECT",
   },
@@ -230,7 +239,7 @@ const projects = [
     year: "2025",
     description:
       "A responsive shopping experience featuring product discovery, category navigation, promotional content and newsletter interaction, with Firebase-backed data handling.",
-    image: "/assets/images/yumbrix.png",
+    image: `${import.meta.env.BASE_URL}assets/images/yumbrix.png`,
     link: "https://senzyenterprises.github.io/yumbrix/",
     linkLabel: "VISIT PROJECT",
   },
@@ -241,7 +250,7 @@ const projects = [
     year: "2025 — PRESENT",
     description:
       "The digital home of Senzy Enterprises, presenting its direction across software development, branding, graphic design, digital experiences and emerging data solutions.",
-    image: "/assets/images/senzy-enterprises.png",
+    image: `${import.meta.env.BASE_URL}assets/images/senzy-enterprises.png`,
     link: "https://senzyenterprises.github.io/1/",
     linkLabel: "VISIT PROJECT",
   },
@@ -252,11 +261,12 @@ const projects = [
     year: "2025",
     description:
       "A React-based information and content platform exploring everyday life, news, business ideas and digital storytelling through a web publishing experience.",
-    image: "/assets/images/behind-the-smile.png",
+    image: `${import.meta.env.BASE_URL}assets/images/behind-the-smile.png`,
     link: "https://senzy01.github.io/My-Elite-World/",
     linkLabel: "VISIT PROJECT",
   },
 ];
+
 
 const achievements = [
   {
@@ -384,7 +394,9 @@ function App() {
       <section className="hero" id="home">
         <div className="hero-grid" />
         <div className="hero-glow" />
-        <MetalAssembly />
+        <Suspense fallback={null}>
+  <MetalAssembly />
+</Suspense>
 
         <div className="hero-content">
           <p className="eyebrow">
@@ -435,7 +447,9 @@ function App() {
       </section>
 
       <section className="intro section-padding" id="about">
-        <CelebrationShine />
+        <Suspense fallback={null}>
+  <CelebrationShine />
+</Suspense>
         <div className="section-label">
           <span>01</span> / THE PERSON BEHIND THE CODE
         </div>
@@ -504,7 +518,7 @@ function App() {
               </p>
               <a
                 className="text-link"
-                href="/assets/document/AdeshinaAttoeResume.pdf"
+                href={`${import.meta.env.BASE_URL}assets/document/AdeshinaAttoeResume.pdf`}
                 target="_blank"
                 rel="noreferrer"
               >
@@ -555,7 +569,9 @@ function App() {
         </div>
       </section>
 
-       <TrainJourney />
+       <Suspense fallback={null}>
+  <TrainJourney />
+</Suspense>
 
       <section className="achievements section-padding" id="recognition">
         <div className="section-label">
